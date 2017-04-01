@@ -8,8 +8,9 @@
 
 import UIKit
 
-class PaymentsController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PaymentsController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
+    @IBOutlet weak var searchBar: UISearchBar!
     var sections = DataLoader.getSections()
     
     @IBOutlet weak var tableView:UITableView!
@@ -21,6 +22,8 @@ class PaymentsController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.dataSource = self
         
         addDataToSections()
+        
+        searchBar.delegate = self
         
     }
     
@@ -60,5 +63,11 @@ class PaymentsController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
-
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        searchBar.endEditing(true)
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar:UISearchBar){
+        searchBar.endEditing(true)
+    }
 }

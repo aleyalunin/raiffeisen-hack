@@ -53,6 +53,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Платежи" id="HC2-aX-lhK"/>
                     <connections>
+                        <outlet property="searchBar" destination="Msf-fo-oRp" id="Xnj-CL-ooD"/>
                         <outlet property="tableView" destination="GGP-Bc-hrL" id="aGu-NA-6b6"/>
                     </connections>
                 </viewController>
