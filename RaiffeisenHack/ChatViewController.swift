@@ -8,11 +8,13 @@
 
 import UIKit
 
-class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ChatBotDelegate {
+class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ChatBotDelegate, UITextFieldDelegate {
     
     var messages:[Message]!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textField: UITextField!
+    
+    
     var nibs = [ChatCell.receiver, ChatCell.sender]
     let bot = Acutus.instance
     
@@ -31,10 +33,13 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.contentInset.bottom = 50.0
         
+        textField.becomeFirstResponder()
+        
     }
     
-    func splitMessages(in array:[Message]){
-        
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.showKeyboard(notification:)), name: Notification.Name.UIKeyboardWillShow, object: nil)
     }
     
     func register(cellsFromNIB:[ChatCell]){
@@ -46,6 +51,23 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
     }
     
+    //MARK: - Text Field
+    
+    func showKeyboard(notification: Notification) {
+        if let frame = notification.userInfo![UIKeyboardFrameEndUserInfoKey] as? NSValue {
+            let height = frame.cgRectValue.height
+            self.tableView.contentInset.bottom = height
+            self.tableView.scrollIndicatorInsets.bottom = height
+            if messages.count > 0 {
+                self.tableView.scrollToRow(at: IndexPath.init(row: messages.count - 1, section: 0), at: .bottom, animated: true)
+            }
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
     //MARK: - ChatBotDelegate
     
@@ -58,7 +80,16 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBAction func didTouchSendButton(_ sender: Any) {
         
         if textField.text != String(){
-            bot.getResponse(mes: textField.text!)
+            let messageText = textField.text!
+            let newMessage = ReceiverMessage(text: messageText, date: Date())
+            messages.append(newMessage)
+            tableView.reloadData()
+            
+            Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false, block: { (timer) in
+                self.bot.getResponse(mes: messageText)
+            })
+            
+            textField.text = String()
         }
         
     }
