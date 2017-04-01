@@ -16,4 +16,5 @@ class GlobalNavBar: UINavigationBar {
         self.barTintColor = orangeColor
     }
 
+    
 }

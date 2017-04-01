@@ -8,13 +8,16 @@
 
 import UIKit
 
-class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ChatBotDelegate {
+class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ChatBotDelegate, UITextFieldDelegate {
     
     var messages:[Message]!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var stackView: UIStackView!
+    
     var nibs = [ChatCell.receiver, ChatCell.sender]
     let bot = Acutus.instance
+    let barHeight:CGFloat = 50.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,10 +34,10 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.contentInset.bottom = 50.0
         
-    }
-    
-    func splitMessages(in array:[Message]){
+        textField.becomeFirstResponder()
         
+        NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
     func register(cellsFromNIB:[ChatCell]){
@@ -46,19 +49,59 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
     }
     
+    //MARK: - Text Field
+    
+    func keyboardWillShow(notification: NSNotification) {
+        
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if view.frame.origin.y == 0{
+                view.frame.origin.y -= keyboardSize.height - barHeight
+            }
+        }
+        
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if view.frame.origin.y != 0{
+                view.frame.origin.y += keyboardSize.height - barHeight
+            }
+        }
+    }    
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
     
     //MARK: - ChatBotDelegate
+    
+    func scrollToBottom(){
+        let indexPath = IndexPath(row: messages.count-1, section: 0)
+        tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+    }
     
     func messageDidLoad(message: String) {
         let newMessage = SenderMessage(text: message, date: Date(), supporter: botSupporter)
         messages.append(newMessage)
         tableView.reloadData()
+        scrollToBottom()
     }
     
     @IBAction func didTouchSendButton(_ sender: Any) {
         
         if textField.text != String(){
-            bot.getResponse(mes: textField.text!)
+            let messageText = textField.text!
+            let newMessage = ReceiverMessage(text: messageText, date: Date())
+            messages.append(newMessage)
+            tableView.reloadData()
+            scrollToBottom()
+            
+            Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false, block: { (timer) in
+                self.bot.getResponse(mes: messageText)
+            })
+            
+            textField.text = String()
         }
         
     }

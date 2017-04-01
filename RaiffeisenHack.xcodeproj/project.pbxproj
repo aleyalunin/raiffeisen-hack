@@ -32,6 +32,7 @@
 		ED0EC7051E8FBF8300676018 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EC7041E8FBF8300676018 /* MessageCell.swift */; };
 		ED0EC7081E8FC0B800676018 /* GlobalNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EC7071E8FC0B800676018 /* GlobalNavBar.swift */; };
 		ED0EC70A1E8FC6A600676018 /* MessageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EC7091E8FC6A600676018 /* MessageLoader.swift */; };
+		ED0EC7191E90041F00676018 /* PaymentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EC7181E90041F00676018 /* PaymentsController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		ED0EC7041E8FBF8300676018 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		ED0EC7071E8FC0B800676018 /* GlobalNavBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalNavBar.swift; sourceTree = "<group>"; };
 		ED0EC7091E8FC6A600676018 /* MessageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageLoader.swift; sourceTree = "<group>"; };
+		ED0EC7181E90041F00676018 /* PaymentsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentsController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				ED0EC6EC1E8F974F00676018 /* Message.swift */,
 				ED0EC6F81E8FA3C700676018 /* Supporter.swift */,
 				ED0EC6EE1E8F999A00676018 /* User.swift */,
+				ED0EC7181E90041F00676018 /* PaymentsController.swift */,
 			);
 			path = RaiffeisenHack;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			files = (
 				ED0EC7081E8FC0B800676018 /* GlobalNavBar.swift in Sources */,
 				111F3A091E8FA7F400C4C86D /* GlobalView.swift in Sources */,
+				ED0EC7191E90041F00676018 /* PaymentsController.swift in Sources */,
 				111F3A071E8FA73400C4C86D /* GlobalTabBarController.swift in Sources */,
 				ED0EC6E91E8F90D600676018 /* Acutus.swift in Sources */,
 				ED0EC6FD1E8FA74D00676018 /* ReceiverMessage.swift in Sources */,
