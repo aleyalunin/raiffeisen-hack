@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ED0EC6D51E8F8FF800676018 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EC6D41E8F8FF800676018 /* AppDelegate.swift */; };
+		ED0EC6D71E8F8FF800676018 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EC6D61E8F8FF800676018 /* ViewController.swift */; };
+		ED0EC6DA1E8F8FF800676018 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED0EC6D81E8F8FF800676018 /* Main.storyboard */; };
+		ED0EC6DC1E8F8FF800676018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED0EC6DB1E8F8FF800676018 /* Assets.xcassets */; };
+		ED0EC6DF1E8F8FF800676018 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED0EC6DD1E8F8FF800676018 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ED0EC6D11E8F8FF800676018 /* RaiffeisenHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaiffeisenHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED0EC6D41E8F8FF800676018 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ED0EC6D61E8F8FF800676018 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ED0EC6D91E8F8FF800676018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED0EC6DB1E8F8FF800676018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED0EC6DE1E8F8FF800676018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ED0EC6E01E8F8FF800676018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ED0EC6CE1E8F8FF800676018 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ED0EC6C81E8F8FF800676018 = {
+			isa = PBXGroup;
+			children = (
+				ED0EC6D31E8F8FF800676018 /* RaiffeisenHack */,
+				ED0EC6D21E8F8FF800676018 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ED0EC6D21E8F8FF800676018 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED0EC6D11E8F8FF800676018 /* RaiffeisenHack.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ED0EC6D31E8F8FF800676018 /* RaiffeisenHack */ = {
+			isa = PBXGroup;
+			children = (
+				ED0EC6D41E8F8FF800676018 /* AppDelegate.swift */,
+				ED0EC6D61E8F8FF800676018 /* ViewController.swift */,
+				ED0EC6D81E8F8FF800676018 /* Main.storyboard */,
+				ED0EC6DB1E8F8FF800676018 /* Assets.xcassets */,
+				ED0EC6DD1E8F8FF800676018 /* LaunchScreen.storyboard */,
+				ED0EC6E01E8F8FF800676018 /* Info.plist */,
+			);
+			path = RaiffeisenHack;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ED0EC6D01E8F8FF800676018 /* RaiffeisenHack */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ED0EC6E31E8F8FF800676018 /* Build configuration list for PBXNativeTarget "RaiffeisenHack" */;
+			buildPhases = (
+				ED0EC6CD1E8F8FF800676018 /* Sources */,
+				ED0EC6CE1E8F8FF800676018 /* Frameworks */,
+				ED0EC6CF1E8F8FF800676018 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RaiffeisenHack;
+			productName = RaiffeisenHack;
+			productReference = ED0EC6D11E8F8FF800676018 /* RaiffeisenHack.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ED0EC6C91E8F8FF800676018 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Kirill Korolev";
+				TargetAttributes = {
+					ED0EC6D01E8F8FF800676018 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = AW37662HE7;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = ED0EC6CC1E8F8FF800676018 /* Build configuration list for PBXProject "RaiffeisenHack" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ED0EC6C81E8F8FF800676018;
+			productRefGroup = ED0EC6D21E8F8FF800676018 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ED0EC6D01E8F8FF800676018 /* RaiffeisenHack */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ED0EC6CF1E8F8FF800676018 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED0EC6DF1E8F8FF800676018 /* LaunchScreen.storyboard in Resources */,
+				ED0EC6DC1E8F8FF800676018 /* Assets.xcassets in Resources */,
+				ED0EC6DA1E8F8FF800676018 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ED0EC6CD1E8F8FF800676018 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ED0EC6D71E8F8FF800676018 /* ViewController.swift in Sources */,
+				ED0EC6D51E8F8FF800676018 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		ED0EC6D81E8F8FF800676018 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED0EC6D91E8F8FF800676018 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ED0EC6DD1E8F8FF800676018 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ED0EC6DE1E8F8FF800676018 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ED0EC6E11E8F8FF800676018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ED0EC6E21E8F8FF800676018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED0EC6E41E8F8FF800676018 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AW37662HE7;
+				INFOPLIST_FILE = RaiffeisenHack/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kirillkorolev.RaiffeisenHack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		ED0EC6E51E8F8FF800676018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AW37662HE7;
+				INFOPLIST_FILE = RaiffeisenHack/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = kirillkorolev.RaiffeisenHack;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ED0EC6CC1E8F8FF800676018 /* Build configuration list for PBXProject "RaiffeisenHack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED0EC6E11E8F8FF800676018 /* Debug */,
+				ED0EC6E21E8F8FF800676018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ED0EC6E31E8F8FF800676018 /* Build configuration list for PBXNativeTarget "RaiffeisenHack" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED0EC6E41E8F8FF800676018 /* Debug */,
+				ED0EC6E51E8F8FF800676018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ED0EC6C91E8F8FF800676018 /* Project object */;
+}
