@@ -27,13 +27,23 @@ subscript(r: Range<Int>) -> String{
 
 public extension Int{
     var stringFormat: String{
-        return format()
+        return format(isNeutral: false)
     }
     
-    func format() -> String{
+    var stringNeutralFormat:String{
+        return format(isNeutral: true)
+    }
+    
+    
+    func format(isNeutral: Bool) -> String{
         var array = [String]()
         var string = ""
-        let pred = self < 0 ? "-":"+"
+        var pred = String()
+        
+        if !isNeutral{
+            pred = self < 0 ? "-":"+"
+        }
+
         
         splitNumber(&array)
         reverseFill(string: &string, array: array)
@@ -76,6 +86,19 @@ public extension Int{
     }
     
 }
+
+
+extension String{
+    var encodedNumber:String{
+        return encode()
+    }
+    
+    func encode() -> String{
+        return "**** " + self[self.length-5..<self.length-1]
+    }
+    
+}
+
 
 public enum ChatCell:String{
     case receiver = "ReceiverCell"
