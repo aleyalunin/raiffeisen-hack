@@ -13,10 +13,7 @@ class GlobalNavBar: UINavigationBar {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        
         self.barTintColor = orangeColor
-       
-        
     }
 
 }

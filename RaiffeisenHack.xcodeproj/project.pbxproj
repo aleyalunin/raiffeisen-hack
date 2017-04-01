@@ -10,6 +10,10 @@
 		111F3A011E8FA08C00C4C86D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 111F3A001E8FA08C00C4C86D /* Assets.xcassets */; };
 		111F3A071E8FA73400C4C86D /* GlobalTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111F3A061E8FA73400C4C86D /* GlobalTabBarController.swift */; };
 		111F3A091E8FA7F400C4C86D /* GlobalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111F3A081E8FA7F400C4C86D /* GlobalView.swift */; };
+		11EF18941E8FF60900780559 /* HistoryDataJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EF18931E8FF60900780559 /* HistoryDataJson.swift */; };
+		11EF18961E8FF6B400780559 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EF18951E8FF6B400780559 /* SwiftyJSON.swift */; };
+		11EF18981E9006F000780559 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EF18971E9006F000780559 /* HistoryViewController.swift */; };
+		11EF189A1E900B5200780559 /* OperationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EF18991E900B5200780559 /* OperationTableViewCell.swift */; };
 		ED0EC6D51E8F8FF800676018 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EC6D41E8F8FF800676018 /* AppDelegate.swift */; };
 		ED0EC6DF1E8F8FF800676018 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED0EC6DD1E8F8FF800676018 /* LaunchScreen.storyboard */; };
 		ED0EC6E91E8F90D600676018 /* Acutus.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EC6E81E8F90D600676018 /* Acutus.swift */; };
@@ -34,6 +38,10 @@
 		111F3A001E8FA08C00C4C86D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		111F3A061E8FA73400C4C86D /* GlobalTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalTabBarController.swift; sourceTree = "<group>"; };
 		111F3A081E8FA7F400C4C86D /* GlobalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalView.swift; sourceTree = "<group>"; };
+		11EF18931E8FF60900780559 /* HistoryDataJson.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryDataJson.swift; sourceTree = "<group>"; };
+		11EF18951E8FF6B400780559 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		11EF18971E9006F000780559 /* HistoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		11EF18991E900B5200780559 /* OperationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationTableViewCell.swift; sourceTree = "<group>"; };
 		ED0EC6D11E8F8FF800676018 /* RaiffeisenHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaiffeisenHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED0EC6D41E8F8FF800676018 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED0EC6DE1E8F8FF800676018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,6 +85,16 @@
 			name = "Global objects";
 			sourceTree = "<group>";
 		};
+		11EF18921E8FF57C00780559 /* HistoryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				11EF18931E8FF60900780559 /* HistoryDataJson.swift */,
+				11EF18971E9006F000780559 /* HistoryViewController.swift */,
+				11EF18991E900B5200780559 /* OperationTableViewCell.swift */,
+			);
+			name = HistoryViewController;
+			sourceTree = "<group>";
+		};
 		ED0EC6C81E8F8FF800676018 = {
 			isa = PBXGroup;
 			children = (
@@ -102,6 +120,7 @@
 				ED0EC6E81E8F90D600676018 /* Acutus.swift */,
 				ED0EC6EA1E8F96C300676018 /* ChatViewController.swift */,
 				ED0EC7091E8FC6A600676018 /* MessageLoader.swift */,
+				11EF18921E8FF57C00780559 /* HistoryViewController */,
 				ED0EC6FC1E8FA74D00676018 /* ReceiverMessage.swift */,
 				ED0EC6FE1E8FA75C00676018 /* SenderMessage.swift */,
 				ED0EC7061E8FBFF300676018 /* ChatCells */,
@@ -115,6 +134,7 @@
 		ED0EC6E71E8F90A000676018 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				11EF18951E8FF6B400780559 /* SwiftyJSON.swift */,
 				ED0EC6D41E8F8FF800676018 /* AppDelegate.swift */,
 				ED0EC6E01E8F8FF800676018 /* Info.plist */,
 				111F3A001E8FA08C00C4C86D /* Assets.xcassets */,
@@ -224,9 +244,13 @@
 				ED0EC70A1E8FC6A600676018 /* MessageLoader.swift in Sources */,
 				ED0EC6FF1E8FA75C00676018 /* SenderMessage.swift in Sources */,
 				ED0EC6EB1E8F96C300676018 /* ChatViewController.swift in Sources */,
+				11EF18941E8FF60900780559 /* HistoryDataJson.swift in Sources */,
 				ED0EC6F91E8FA3C700676018 /* Supporter.swift in Sources */,
+				11EF18961E8FF6B400780559 /* SwiftyJSON.swift in Sources */,
+				11EF18981E9006F000780559 /* HistoryViewController.swift in Sources */,
 				ED0EC6D51E8F8FF800676018 /* AppDelegate.swift in Sources */,
 				ED0EC7051E8FBF8300676018 /* MessageCell.swift in Sources */,
+				11EF189A1E900B5200780559 /* OperationTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
