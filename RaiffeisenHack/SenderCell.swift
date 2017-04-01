@@ -8,17 +8,26 @@
 
 import UIKit
 
-class SenderCell: UITableViewCell {
+class SenderCell: MessageCell, MessageCellProtocol {
 
+    var message:String{
+        get{
+            return messageText
+        }
+        set{
+            messageText = newValue
+            textView.text = messageText
+        }
+    }
+    
+    
+    @IBOutlet weak var cloudView: UIView!
+    @IBOutlet weak var textView: UITextView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        cloudView.layer.cornerRadius = 15.0
+        cloudView.layer.masksToBounds = true
     }
     
 }

@@ -12,3 +12,7 @@ public enum ChatCell:String{
     case receiver = "ReceiverCell"
     case sender = "SenderCell"
 }
+
+protocol MessageCellProtocol{
+    var message:String { get set }
+}

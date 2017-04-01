@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="slk-Be-Vaa">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="slk-Be-Vaa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -50,7 +50,7 @@
         <!--Чат-->
         <scene sceneID="5DZ-dF-Xm6">
             <objects>
-                <viewController id="dnb-J8-0LI" sceneMemberID="viewController">
+                <viewController id="dnb-J8-0LI" customClass="ChatViewController" customModule="RaiffeisenHack" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="66E-mS-uPu"/>
                         <viewControllerLayoutGuide type="bottom" id="eOj-3q-PKg"/>
@@ -58,13 +58,29 @@
                     <view key="view" contentMode="scaleToFill" id="VNo-SA-s04" customClass="GlobalView" customModule="RaiffeisenHack" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mCo-q8-XUr">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mCo-q8-XUr" firstAttribute="width" secondItem="VNo-SA-s04" secondAttribute="width" id="5ZB-9I-Zp0"/>
+                            <constraint firstItem="mCo-q8-XUr" firstAttribute="height" secondItem="VNo-SA-s04" secondAttribute="height" id="Gn3-7Y-zBn"/>
+                            <constraint firstItem="mCo-q8-XUr" firstAttribute="centerX" secondItem="VNo-SA-s04" secondAttribute="centerX" id="Kjk-Rf-OpJ"/>
+                            <constraint firstItem="mCo-q8-XUr" firstAttribute="centerY" secondItem="VNo-SA-s04" secondAttribute="centerY" id="pgV-mz-LPE"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Чат" id="SJR-j6-rCP"/>
+                    <connections>
+                        <outlet property="tableView" destination="mCo-q8-XUr" id="Ion-uf-b2I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7VO-Dw-9jC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1705" y="797"/>
+            <point key="canvasLocation" x="1704.8" y="796.55172413793105"/>
         </scene>
         <!--Еще-->
         <scene sceneID="S4S-gU-s7d">
@@ -131,7 +147,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AGG-CO-Jd8" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Счета" image="billings" selectedImage="billings-fill" id="fH9-zT-oXB"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ze0-Vf-6xg" customClass="GlobalNavigationBar" customModule="RaiffeisenHack" customModuleProvider="target">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ze0-Vf-6xg" customClass="GlobalNavBar" customModule="RaiffeisenHack" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -150,7 +166,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JAd-rm-Urz" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Платежи" image="payments" selectedImage="payments-fill" id="3ZB-12-g4h"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yS3-HY-Lrq" customClass="GlobalNavigationBar" customModule="RaiffeisenHack" customModuleProvider="target">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yS3-HY-Lrq" customClass="GlobalNavBar" customModule="RaiffeisenHack" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -169,7 +185,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gWD-X5-oim" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="История" image="history" selectedImage="history-fill" id="2dL-HY-zer"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XOj-Jw-CRl" customClass="GlobalNavigationBar" customModule="RaiffeisenHack" customModuleProvider="target">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XOj-Jw-CRl" customClass="GlobalNavBar" customModule="RaiffeisenHack" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -188,7 +204,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xkw-qp-3fT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Чат" image="chat" selectedImage="chat-fill" id="nYz-uY-cXU"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FtJ-Mz-boG" customClass="GlobalNavigationBar" customModule="RaiffeisenHack" customModuleProvider="target">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FtJ-Mz-boG" customClass="GlobalNavBar" customModule="RaiffeisenHack" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -207,7 +223,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Vu-Lb-dos" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Еще" image="more" selectedImage="more-fill" id="UrU-ed-PdW"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zPr-PX-oiW" customClass="GlobalNavigationBar" customModule="RaiffeisenHack" customModuleProvider="target">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zPr-PX-oiW" customClass="GlobalNavBar" customModule="RaiffeisenHack" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

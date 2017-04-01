@@ -7,11 +7,17 @@
 //
 
 import Foundation
+import UIKit
 
 class Supporter{
     
-    init(){
-        
+    var isBot: Bool
+    var name:String?
+    var image:UIImage!
+    
+    init(isBot: Bool) {
+        self.isBot = isBot
     }
+
     
 }

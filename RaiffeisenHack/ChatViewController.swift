@@ -17,6 +17,19 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         self.register(cellsFromNIB: nibs)
+        
+        let currentDate = Date()
+        
+        messages = [ReceiverMessage(text: "превед медвед", date:currentDate), ReceiverMessage(text: "превед медвед", date:currentDate),ReceiverMessage(text: "превед медвед", date:currentDate),ReceiverMessage(text: "превед медвед", date:currentDate),ReceiverMessage(text: "превед медвед", date:currentDate),ReceiverMessage(text: "превед медвед", date:currentDate),ReceiverMessage(text: "превед медвед", date:currentDate)]
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        
+        tableView.estimatedRowHeight = 50
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.contentInset.bottom = 50.0
+        
     }
     
     func register(cellsFromNIB:[ChatCell]){
@@ -52,6 +65,8 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func drawReceiverCell(_ tableView: UITableView, _ indexPath: IndexPath, _ message: ReceiverMessage) -> UITableViewCell{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ChatCell.receiver.rawValue, for: indexPath) as! ReceiverCell
+        
+        cell.message = message.text
         
         return cell
     }

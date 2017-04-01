@@ -1,19 +1,22 @@
 //
-//  GlobalNavigationBar.swift
+//  GlobalNavBar.swift
 //  RaiffeisenHack
 //
-//  Created by Alexander on 01/04/2017.
+//  Created by Kirill Korolev on 01/04/17.
 //  Copyright © 2017 Kirill Korolev. All rights reserved.
 //
 
 import UIKit
 
 @IBDesignable
-class GlobalNavigationBar: UINavigationBar {
+class GlobalNavBar: UINavigationBar {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        UINavigationBar.appearance().barTintColor = orangeColor
+        
+        self.barTintColor = orangeColor
+       
+        
     }
 
 }
