@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="slk-Be-Vaa">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="slk-Be-Vaa">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -81,7 +81,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="85"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="810-DS-cPe" id="CjZ-sQ-Sqi">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="84.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EaU-rh-Hnb">
@@ -171,16 +171,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aqJ-ac-hBT">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UmM-oS-cga">
+                                <rect key="frame" x="0.0" y="64" width="375" height="553"/>
                                 <subviews>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mCo-q8-XUr">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="569"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="mCo-q8-XUr">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="503"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7u2-L3-yFo">
-                                        <rect key="frame" x="0.0" y="568" width="375" height="50"/>
+                                        <rect key="frame" x="0.0" y="503" width="375" height="50"/>
                                         <subviews>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hqy-q7-x3G">
                                                 <rect key="frame" x="15" y="10" width="254" height="30"/>
@@ -193,7 +193,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="81" id="qOR-gL-4bi"/>
                                                 </constraints>
-                                                <state key="normal" title="Отправить"/>
+                                                <state key="normal" title="Отправ."/>
                                                 <connections>
                                                     <action selector="didTouchSendButton:" destination="dnb-J8-0LI" eventType="touchUpInside" id="5g1-c8-MV8"/>
                                                 </connections>
@@ -206,32 +206,23 @@
                                             <constraint firstItem="Hqy-q7-x3G" firstAttribute="leading" secondItem="7u2-L3-yFo" secondAttribute="leading" constant="15" id="GZC-E9-efJ"/>
                                             <constraint firstAttribute="trailing" secondItem="ESi-Wl-P7z" secondAttribute="trailing" constant="15" id="Soy-Mj-qFZ"/>
                                             <constraint firstItem="Hqy-q7-x3G" firstAttribute="centerY" secondItem="7u2-L3-yFo" secondAttribute="centerY" id="apo-sC-IGJ"/>
-                                            <constraint firstAttribute="height" constant="50" id="gXf-Gp-GSt"/>
+                                            <constraint firstAttribute="height" constant="50" id="oba-WO-nF7"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="mCo-q8-XUr" firstAttribute="width" secondItem="aqJ-ac-hBT" secondAttribute="width" id="4cE-Md-TIU"/>
-                                    <constraint firstItem="7u2-L3-yFo" firstAttribute="width" secondItem="aqJ-ac-hBT" secondAttribute="width" id="S9s-4R-6hA"/>
-                                    <constraint firstItem="7u2-L3-yFo" firstAttribute="top" secondItem="mCo-q8-XUr" secondAttribute="bottom" constant="-1" id="XJt-4M-zZ3"/>
-                                    <constraint firstAttribute="bottom" secondItem="7u2-L3-yFo" secondAttribute="bottom" id="de3-07-few"/>
-                                    <constraint firstItem="mCo-q8-XUr" firstAttribute="top" secondItem="aqJ-ac-hBT" secondAttribute="top" id="qNc-4x-QVy"/>
-                                    <constraint firstItem="mCo-q8-XUr" firstAttribute="centerX" secondItem="aqJ-ac-hBT" secondAttribute="centerX" id="sNP-QN-fgC"/>
-                                    <constraint firstItem="7u2-L3-yFo" firstAttribute="centerX" secondItem="aqJ-ac-hBT" secondAttribute="centerX" id="trO-bb-2Oe"/>
-                                </constraints>
-                            </view>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="aqJ-ac-hBT" firstAttribute="top" secondItem="66E-mS-uPu" secondAttribute="bottom" constant="-64" id="4nS-Ud-vs6"/>
-                            <constraint firstItem="aqJ-ac-hBT" firstAttribute="centerX" secondItem="VNo-SA-s04" secondAttribute="centerX" id="P83-gf-CMG"/>
-                            <constraint firstItem="aqJ-ac-hBT" firstAttribute="width" secondItem="VNo-SA-s04" secondAttribute="width" id="p5d-ZD-BcT"/>
-                            <constraint firstItem="eOj-3q-PKg" firstAttribute="top" secondItem="aqJ-ac-hBT" secondAttribute="bottom" id="qdG-Fm-Lsm"/>
+                            <constraint firstItem="UmM-oS-cga" firstAttribute="top" secondItem="66E-mS-uPu" secondAttribute="bottom" id="6M7-wZ-8px"/>
+                            <constraint firstItem="eOj-3q-PKg" firstAttribute="top" secondItem="UmM-oS-cga" secondAttribute="bottom" constant="1" id="N2X-hj-FX7"/>
+                            <constraint firstAttribute="trailing" secondItem="UmM-oS-cga" secondAttribute="trailing" id="O8Y-al-26G"/>
+                            <constraint firstItem="UmM-oS-cga" firstAttribute="leading" secondItem="VNo-SA-s04" secondAttribute="leading" id="SZm-Vd-ddb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Чат" id="SJR-j6-rCP"/>
                     <connections>
+                        <outlet property="stackView" destination="UmM-oS-cga" id="aBs-gO-QJv"/>
                         <outlet property="tableView" destination="mCo-q8-XUr" id="Ion-uf-b2I"/>
                         <outlet property="textField" destination="Hqy-q7-x3G" id="A6U-5H-4EU"/>
                     </connections>
@@ -324,7 +315,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JAd-rm-Urz" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Платежи" image="payments" selectedImage="payments-fill" id="3ZB-12-g4h"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="yS3-HY-Lrq" customClass="GlobalNavBar" customModule="RaiffeisenHack" customModuleProvider="target">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yS3-HY-Lrq" customClass="GlobalNavBar" customModule="RaiffeisenHack" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">

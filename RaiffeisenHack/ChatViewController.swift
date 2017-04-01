@@ -13,10 +13,11 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     var messages:[Message]!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textField: UITextField!
-    
+    @IBOutlet weak var stackView: UIStackView!
     
     var nibs = [ChatCell.receiver, ChatCell.sender]
     let bot = Acutus.instance
+    let barHeight:CGFloat = 50.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,11 +36,8 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         textField.becomeFirstResponder()
         
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.showKeyboard(notification:)), name: Notification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
     func register(cellsFromNIB:[ChatCell]){
@@ -53,16 +51,23 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     //MARK: - Text Field
     
-    func showKeyboard(notification: Notification) {
-        if let frame = notification.userInfo![UIKeyboardFrameEndUserInfoKey] as? NSValue {
-            let height = frame.cgRectValue.height
-            self.tableView.contentInset.bottom = height
-            self.tableView.scrollIndicatorInsets.bottom = height
-            if messages.count > 0 {
-                self.tableView.scrollToRow(at: IndexPath.init(row: messages.count - 1, section: 0), at: .bottom, animated: true)
+    func keyboardWillShow(notification: NSNotification) {
+        
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if view.frame.origin.y == 0{
+                view.frame.origin.y -= keyboardSize.height - barHeight
             }
         }
+        
     }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if view.frame.origin.y != 0{
+                view.frame.origin.y += keyboardSize.height - barHeight
+            }
+        }
+    }    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -71,10 +76,16 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     //MARK: - ChatBotDelegate
     
+    func scrollToBottom(){
+        let indexPath = IndexPath(row: messages.count-1, section: 0)
+        tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+    }
+    
     func messageDidLoad(message: String) {
         let newMessage = SenderMessage(text: message, date: Date(), supporter: botSupporter)
         messages.append(newMessage)
         tableView.reloadData()
+        scrollToBottom()
     }
     
     @IBAction func didTouchSendButton(_ sender: Any) {
@@ -84,6 +95,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
             let newMessage = ReceiverMessage(text: messageText, date: Date())
             messages.append(newMessage)
             tableView.reloadData()
+            scrollToBottom()
             
             Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false, block: { (timer) in
                 self.bot.getResponse(mes: messageText)
