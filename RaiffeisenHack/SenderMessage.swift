@@ -10,4 +10,11 @@ import Foundation
 
 class SenderMessage:Message{
     
+    var supporter: Supporter
+    
+    init(text: String, date:Date, supporter: Supporter) {
+        self.supporter = supporter
+        super.init(text: text, date: date)
+    }
+    
 }

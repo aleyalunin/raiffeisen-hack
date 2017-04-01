@@ -36,6 +36,12 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="16:12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4J-rD-Ov1">
+                        <rect key="frame" x="295" y="4" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailingMargin" secondItem="HLa-WW-HHe" secondAttribute="trailing" constant="15" id="Gn1-zm-AuI"/>
@@ -43,12 +49,15 @@
                     <constraint firstItem="HLa-WW-HHe" firstAttribute="width" secondItem="s9W-W9-JcE" secondAttribute="width" constant="10" id="SMi-ll-xlV"/>
                     <constraint firstItem="s9W-W9-JcE" firstAttribute="height" secondItem="HLa-WW-HHe" secondAttribute="height" id="Xxi-62-meQ"/>
                     <constraint firstItem="s9W-W9-JcE" firstAttribute="centerX" secondItem="HLa-WW-HHe" secondAttribute="centerX" id="db2-bl-yiz"/>
+                    <constraint firstItem="HLa-WW-HHe" firstAttribute="leading" secondItem="I4J-rD-Ov1" secondAttribute="trailing" constant="5" id="lDs-1j-3aQ"/>
                     <constraint firstItem="s9W-W9-JcE" firstAttribute="centerY" secondItem="HLa-WW-HHe" secondAttribute="centerY" id="raT-4x-EPs"/>
                     <constraint firstAttribute="bottom" secondItem="HLa-WW-HHe" secondAttribute="bottom" constant="6" id="tdZ-4I-o0s"/>
+                    <constraint firstItem="I4J-rD-Ov1" firstAttribute="centerY" secondItem="HLa-WW-HHe" secondAttribute="centerY" id="uR9-b5-30h"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="cloudView" destination="HLa-WW-HHe" id="zgi-Jd-ePx"/>
+                <outlet property="dateLabel" destination="I4J-rD-Ov1" id="0Y3-NR-vhY"/>
                 <outlet property="textView" destination="s9W-W9-JcE" id="XKq-Iq-LXO"/>
             </connections>
             <point key="canvasLocation" x="74" y="82"/>

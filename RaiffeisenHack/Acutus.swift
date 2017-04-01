@@ -15,14 +15,14 @@ public protocol ChatBotDelegate:class{
 class Acutus:NSObject, URLSessionDataDelegate{
     
     static let instance = Acutus()
-    var message:String!
     weak var delegate:ChatBotDelegate!
     var data: NSMutableData!
     var urlPath: String!
     
-    func getResponse(message: String){
+    func getResponse(mes: String){
         
-        urlPath = "http://kafafyf-001-site1.itempurl.com/Default.aspx?msg=" + message
+        let test = mes.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
+        urlPath = "http://kafafyf-001-site1.itempurl.com/Default.aspx?msg=" + test
         data = NSMutableData()
         
         let url = URL(string: urlPath)!
@@ -48,34 +48,14 @@ class Acutus:NSObject, URLSessionDataDelegate{
         }
         else{
             print("Data has been downloaded")
-            self.parseJSON()
-        }
-    }
-    
-    func parseJSON(){
-     
-        var jsonResult = NSArray()
-        
-        do {
-            try jsonResult = JSONSerialization.jsonObject(with: self.data as Data, options: .allowFragments) as! NSArray
-        } catch let error {
-            print(error)
-        }
-        
-        var jsonDictionary = NSDictionary()
-        
-        
-        for i in 0..<jsonResult.count{
-            jsonDictionary = jsonResult[i] as! NSDictionary
             
-            message = jsonDictionary["message"] as! String
+            let htmlResponse = String(data: data as Data, encoding: String.Encoding.utf8)!
+            
+            DispatchQueue.main.async{
+                self.delegate.messageDidLoad(message: htmlResponse)
+            }
+            
         }
-        
-        DispatchQueue.main.async{
-            self.delegate.messageDidLoad(message: self.message)
-        }
-        
-        
     }
     
     

@@ -8,27 +8,32 @@
 
 import UIKit
 
-class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ChatBotDelegate {
     
     var messages:[Message]!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var textField: UITextField!
     var nibs = [ChatCell.receiver, ChatCell.sender]
+    let bot = Acutus.instance
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.register(cellsFromNIB: nibs)
         
-        let currentDate = Date()
-        
-        messages = [ReceiverMessage(text: "превед медвед", date:currentDate), ReceiverMessage(text: "превед медвед", date:currentDate),ReceiverMessage(text: "превед медвед", date:currentDate),ReceiverMessage(text: "превед медвед", date:currentDate),ReceiverMessage(text: "превед медвед", date:currentDate),ReceiverMessage(text: "превед медвед", date:currentDate),ReceiverMessage(text: "превед медвед", date:currentDate)]
+        messages = MessageLoader.instance.loadMessages()
         
         tableView.delegate = self
         tableView.dataSource = self
         
+        bot.delegate = self
         
         tableView.estimatedRowHeight = 50
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.contentInset.bottom = 50.0
+        
+    }
+    
+    func splitMessages(in array:[Message]){
         
     }
     
@@ -37,6 +42,23 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         for cell in cellsFromNIB{
             let nib = UINib(nibName: cell.rawValue, bundle: nil)
             tableView.register(nib, forCellReuseIdentifier: cell.rawValue)
+        }
+        
+    }
+    
+    
+    //MARK: - ChatBotDelegate
+    
+    func messageDidLoad(message: String) {
+        let newMessage = SenderMessage(text: message, date: Date(), supporter: botSupporter)
+        messages.append(newMessage)
+        tableView.reloadData()
+    }
+    
+    @IBAction func didTouchSendButton(_ sender: Any) {
+        
+        if textField.text != String(){
+            bot.getResponse(mes: textField.text!)
         }
         
     }
@@ -67,6 +89,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.dequeueReusableCell(withIdentifier: ChatCell.receiver.rawValue, for: indexPath) as! ReceiverCell
         
         cell.message = message.text
+        cell.date = message.date
         
         return cell
     }
@@ -74,12 +97,28 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func drawSenderCell(_ tableView: UITableView, _ indexPath: IndexPath, _ message:SenderMessage) -> UITableViewCell{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ChatCell.sender.rawValue, for: indexPath) as! SenderCell
+ 
+        cell.message = message.text
+        cell.date = message.date
+        
+        var requireImage = false
+        
+        if indexPath.row == messages.count-1{
+            requireImage = true
+        }
+        else if messages[indexPath.row+1] is ReceiverMessage
+        {
+            requireImage = true
+        }
+        
+        
+        if requireImage{
+            cell.customView.image = message.supporter.image
+        }
         
         return cell
     }
     
-    
-    //MARK: - UITableViewDelegate
     
     
 

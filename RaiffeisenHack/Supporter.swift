@@ -13,10 +13,17 @@ class Supporter{
     
     var isBot: Bool
     var name:String?
-    var image:UIImage!
+    var image:UIImage
     
-    init(isBot: Bool) {
-        self.isBot = isBot
+    init(image:UIImage) {
+        self.isBot = true
+        self.image = image
+    }
+    
+    init(name:String, image:UIImage) {
+        self.isBot = false
+        self.name = name
+        self.image = image
     }
 
     
