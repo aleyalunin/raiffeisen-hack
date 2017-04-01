@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		111F3A011E8FA08C00C4C86D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 111F3A001E8FA08C00C4C86D /* Assets.xcassets */; };
 		ED0EC6D51E8F8FF800676018 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EC6D41E8F8FF800676018 /* AppDelegate.swift */; };
 		ED0EC6D71E8F8FF800676018 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EC6D61E8F8FF800676018 /* ViewController.swift */; };
 		ED0EC6DA1E8F8FF800676018 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED0EC6D81E8F8FF800676018 /* Main.storyboard */; };
-		ED0EC6DC1E8F8FF800676018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED0EC6DB1E8F8FF800676018 /* Assets.xcassets */; };
 		ED0EC6DF1E8F8FF800676018 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED0EC6DD1E8F8FF800676018 /* LaunchScreen.storyboard */; };
 		ED0EC6E91E8F90D600676018 /* Acutus.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EC6E81E8F90D600676018 /* Acutus.swift */; };
 		ED0EC6EB1E8F96C300676018 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EC6EA1E8F96C300676018 /* ChatViewController.swift */; };
@@ -19,11 +19,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		111F3A001E8FA08C00C4C86D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED0EC6D11E8F8FF800676018 /* RaiffeisenHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaiffeisenHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED0EC6D41E8F8FF800676018 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED0EC6D61E8F8FF800676018 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		ED0EC6D91E8F8FF800676018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		ED0EC6DB1E8F8FF800676018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED0EC6DE1E8F8FF800676018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED0EC6E01E8F8FF800676018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED0EC6E81E8F90D600676018 /* Acutus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Acutus.swift; sourceTree = "<group>"; };
@@ -65,7 +65,6 @@
 				ED0EC6E71E8F90A000676018 /* Assisting Files */,
 				ED0EC6E61E8F909500676018 /* Storyboard */,
 				ED0EC6D61E8F8FF800676018 /* ViewController.swift */,
-				ED0EC6DB1E8F8FF800676018 /* Assets.xcassets */,
 				ED0EC6E81E8F90D600676018 /* Acutus.swift */,
 				ED0EC6EA1E8F96C300676018 /* ChatViewController.swift */,
 				ED0EC6EC1E8F974F00676018 /* Message.swift */,
@@ -88,6 +87,7 @@
 			children = (
 				ED0EC6D41E8F8FF800676018 /* AppDelegate.swift */,
 				ED0EC6E01E8F8FF800676018 /* Info.plist */,
+				111F3A001E8FA08C00C4C86D /* Assets.xcassets */,
 			);
 			name = "Assisting Files";
 			sourceTree = "<group>";
@@ -153,7 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED0EC6DF1E8F8FF800676018 /* LaunchScreen.storyboard in Resources */,
-				ED0EC6DC1E8F8FF800676018 /* Assets.xcassets in Resources */,
+				111F3A011E8FA08C00C4C86D /* Assets.xcassets in Resources */,
 				ED0EC6DA1E8F8FF800676018 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +334,7 @@
 				ED0EC6E51E8F8FF800676018 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
