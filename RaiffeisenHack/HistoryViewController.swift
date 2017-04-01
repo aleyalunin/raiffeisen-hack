@@ -16,7 +16,10 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         super.viewDidLoad()
         historyTableView.delegate = self
         historyTableView.dataSource = self
-        // Do any additional setup after loading the view.
+        
+        let nib = UINib(nibName: "GlobalCell", bundle: nil)
+        historyTableView.register(nib, forCellReuseIdentifier: "GlobalCell")
+        
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -29,13 +32,14 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = historyTableView.dequeueReusableCell(withIdentifier: "operationCell", for: indexPath)
+        let cell = historyTableView.dequeueReusableCell(withIdentifier: "GlobalCell", for: indexPath)
         
-        let operation = historyDataJson[indexPath.section]["operations"][indexPath.row]
         
-        if let operationCell = cell as? OperationTableViewCell{
-            operationCell.setUpOperationCellWith(operation: operation)
+        if let operationCell = cell as? GlobalCell{
+            let operation = historyDataJson[indexPath.section]["operations"][indexPath.row]
+            operationCell.setUpCellWith(operation: operation)
         }
+        
         return cell
         
     }
