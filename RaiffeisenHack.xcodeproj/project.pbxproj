@@ -93,6 +93,14 @@
 			name = "Global objects";
 			sourceTree = "<group>";
 		};
+		11430DAA1E90518C004C730F /* PaymentsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ED0EC7181E90041F00676018 /* PaymentsController.swift */,
+			);
+			name = PaymentsViewController;
+			sourceTree = "<group>";
+		};
 		115257E91E90359F000323A4 /* BillingsViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,7 +154,7 @@
 				ED0EC6EC1E8F974F00676018 /* Message.swift */,
 				ED0EC6F81E8FA3C700676018 /* Supporter.swift */,
 				ED0EC6EE1E8F999A00676018 /* User.swift */,
-				ED0EC7181E90041F00676018 /* PaymentsController.swift */,
+				11430DAA1E90518C004C730F /* PaymentsViewController */,
 			);
 			path = RaiffeisenHack;
 			sourceTree = "<group>";
