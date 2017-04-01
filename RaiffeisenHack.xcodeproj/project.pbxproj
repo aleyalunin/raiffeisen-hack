@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		111F3A011E8FA08C00C4C86D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 111F3A001E8FA08C00C4C86D /* Assets.xcassets */; };
+		111F3A031E8FA10800C4C86D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 111F3A021E8FA10800C4C86D /* Main.storyboard */; };
 		ED0EC6D51E8F8FF800676018 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EC6D41E8F8FF800676018 /* AppDelegate.swift */; };
 		ED0EC6D71E8F8FF800676018 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EC6D61E8F8FF800676018 /* ViewController.swift */; };
-		ED0EC6DA1E8F8FF800676018 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED0EC6D81E8F8FF800676018 /* Main.storyboard */; };
 		ED0EC6DF1E8F8FF800676018 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED0EC6DD1E8F8FF800676018 /* LaunchScreen.storyboard */; };
 		ED0EC6E91E8F90D600676018 /* Acutus.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EC6E81E8F90D600676018 /* Acutus.swift */; };
 		ED0EC6EB1E8F96C300676018 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EC6EA1E8F96C300676018 /* ChatViewController.swift */; };
@@ -20,10 +20,10 @@
 
 /* Begin PBXFileReference section */
 		111F3A001E8FA08C00C4C86D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		111F3A021E8FA10800C4C86D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		ED0EC6D11E8F8FF800676018 /* RaiffeisenHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RaiffeisenHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED0EC6D41E8F8FF800676018 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED0EC6D61E8F8FF800676018 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ED0EC6D91E8F8FF800676018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ED0EC6DE1E8F8FF800676018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED0EC6E01E8F8FF800676018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED0EC6E81E8F90D600676018 /* Acutus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Acutus.swift; sourceTree = "<group>"; };
@@ -62,8 +62,8 @@
 		ED0EC6D31E8F8FF800676018 /* RaiffeisenHack */ = {
 			isa = PBXGroup;
 			children = (
-				ED0EC6E71E8F90A000676018 /* Assisting Files */,
-				ED0EC6E61E8F909500676018 /* Storyboard */,
+				111F3A021E8FA10800C4C86D /* Main.storyboard */,
+				ED0EC6E71E8F90A000676018 /* Supporting Files */,
 				ED0EC6D61E8F8FF800676018 /* ViewController.swift */,
 				ED0EC6E81E8F90D600676018 /* Acutus.swift */,
 				ED0EC6EA1E8F96C300676018 /* ChatViewController.swift */,
@@ -73,23 +73,15 @@
 			path = RaiffeisenHack;
 			sourceTree = "<group>";
 		};
-		ED0EC6E61E8F909500676018 /* Storyboard */ = {
-			isa = PBXGroup;
-			children = (
-				ED0EC6D81E8F8FF800676018 /* Main.storyboard */,
-				ED0EC6DD1E8F8FF800676018 /* LaunchScreen.storyboard */,
-			);
-			name = Storyboard;
-			sourceTree = "<group>";
-		};
-		ED0EC6E71E8F90A000676018 /* Assisting Files */ = {
+		ED0EC6E71E8F90A000676018 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				ED0EC6D41E8F8FF800676018 /* AppDelegate.swift */,
 				ED0EC6E01E8F8FF800676018 /* Info.plist */,
 				111F3A001E8FA08C00C4C86D /* Assets.xcassets */,
+				ED0EC6DD1E8F8FF800676018 /* LaunchScreen.storyboard */,
 			);
-			name = "Assisting Files";
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,9 +144,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				111F3A031E8FA10800C4C86D /* Main.storyboard in Resources */,
 				ED0EC6DF1E8F8FF800676018 /* LaunchScreen.storyboard in Resources */,
 				111F3A011E8FA08C00C4C86D /* Assets.xcassets in Resources */,
-				ED0EC6DA1E8F8FF800676018 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,14 +169,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		ED0EC6D81E8F8FF800676018 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ED0EC6D91E8F8FF800676018 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ED0EC6DD1E8F8FF800676018 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
