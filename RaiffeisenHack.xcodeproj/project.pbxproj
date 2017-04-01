@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		111F3A011E8FA08C00C4C86D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 111F3A001E8FA08C00C4C86D /* Assets.xcassets */; };
-		111F3A031E8FA10800C4C86D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 111F3A021E8FA10800C4C86D /* Main.storyboard */; };
-		111F3A051E8FA49300C4C86D /* GlobalNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111F3A041E8FA49300C4C86D /* GlobalNavigationBar.swift */; };
 		111F3A071E8FA73400C4C86D /* GlobalTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111F3A061E8FA73400C4C86D /* GlobalTabBarController.swift */; };
 		111F3A091E8FA7F400C4C86D /* GlobalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111F3A081E8FA7F400C4C86D /* GlobalView.swift */; };
 		ED0EC6D51E8F8FF800676018 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EC6D41E8F8FF800676018 /* AppDelegate.swift */; };
@@ -31,7 +29,6 @@
 
 /* Begin PBXFileReference section */
 		111F3A001E8FA08C00C4C86D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		111F3A021E8FA10800C4C86D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		111F3A041E8FA49300C4C86D /* GlobalNavigationBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalNavigationBar.swift; sourceTree = "<group>"; };
 		111F3A061E8FA73400C4C86D /* GlobalTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalTabBarController.swift; sourceTree = "<group>"; };
 		111F3A081E8FA7F400C4C86D /* GlobalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalView.swift; sourceTree = "<group>"; };
@@ -94,7 +91,6 @@
 		ED0EC6D31E8F8FF800676018 /* RaiffeisenHack */ = {
 			isa = PBXGroup;
 			children = (
-				111F3A021E8FA10800C4C86D /* Main.storyboard */,
 				111F3A0A1E8FA8F400C4C86D /* Global objects */,
 				ED0EC6E71E8F90A000676018 /* Supporting Files */,
 				ED0EC6D61E8F8FF800676018 /* ViewController.swift */,
@@ -185,7 +181,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				111F3A031E8FA10800C4C86D /* Main.storyboard in Resources */,
 				ED0EC6DF1E8F8FF800676018 /* LaunchScreen.storyboard in Resources */,
 				ED0EC6F31E8FA32600676018 /* ReceiverCell.xib in Resources */,
 				ED0EC6F71E8FA33200676018 /* SenderCell.xib in Resources */,
