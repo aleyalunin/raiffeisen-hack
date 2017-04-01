@@ -18,6 +18,7 @@ class Supporter{
     init(image:UIImage) {
         self.isBot = true
         self.image = image
+        self.name = "Бот"
     }
     
     init(name:String, image:UIImage) {

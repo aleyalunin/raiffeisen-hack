@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 extension String{
 var length: Int{
@@ -140,5 +141,18 @@ class DataLoader{
         return [Contact(fullname: "Александр Широков"), Contact(fullname:"Дмитрий Шварц")]
     }
     
+}
+
+// Put this piece of code anywhere you like
+extension UIViewController {
+    func hideKeyboardWhenTappedAround(view: UITableView) {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
 
