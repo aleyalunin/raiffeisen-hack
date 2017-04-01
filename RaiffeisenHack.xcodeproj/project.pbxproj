@@ -25,6 +25,7 @@
 		ED0EC6FB1E8FA47A00676018 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EC6FA1E8FA47A00676018 /* Utils.swift */; };
 		ED0EC6FD1E8FA74D00676018 /* ReceiverMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EC6FC1E8FA74D00676018 /* ReceiverMessage.swift */; };
 		ED0EC6FF1E8FA75C00676018 /* SenderMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED0EC6FE1E8FA75C00676018 /* SenderMessage.swift */; };
+		ED0EC7031E8FAE4D00676018 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED0EC7021E8FAE4D00676018 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		ED0EC6FA1E8FA47A00676018 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		ED0EC6FC1E8FA74D00676018 /* ReceiverMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiverMessage.swift; sourceTree = "<group>"; };
 		ED0EC6FE1E8FA75C00676018 /* SenderMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SenderMessage.swift; sourceTree = "<group>"; };
+		ED0EC7021E8FAE4D00676018 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 		ED0EC6D31E8F8FF800676018 /* RaiffeisenHack */ = {
 			isa = PBXGroup;
 			children = (
+				ED0EC7021E8FAE4D00676018 /* Main.storyboard */,
 				111F3A0A1E8FA8F400C4C86D /* Global objects */,
 				ED0EC6E71E8F90A000676018 /* Supporting Files */,
 				ED0EC6D61E8F8FF800676018 /* ViewController.swift */,
@@ -182,6 +185,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED0EC6DF1E8F8FF800676018 /* LaunchScreen.storyboard in Resources */,
+				ED0EC7031E8FAE4D00676018 /* Main.storyboard in Resources */,
 				ED0EC6F31E8FA32600676018 /* ReceiverCell.xib in Resources */,
 				ED0EC6F71E8FA33200676018 /* SenderCell.xib in Resources */,
 				111F3A011E8FA08C00C4C86D /* Assets.xcassets in Resources */,
