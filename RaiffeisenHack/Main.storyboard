@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Платежи-->
         <scene sceneID="JEc-Vp-vRQ">
             <objects>
                 <viewController id="Af4-ee-4X8" sceneMemberID="viewController">
@@ -17,18 +17,18 @@
                         <viewControllerLayoutGuide type="top" id="zUe-hn-63l"/>
                         <viewControllerLayoutGuide type="bottom" id="n64-63-5bX"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Si0-QD-7pq">
+                    <view key="view" contentMode="scaleToFill" id="Si0-QD-7pq" customClass="GlobalView" customModule="RaiffeisenHack" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="HC2-aX-lhK"/>
+                    <navigationItem key="navigationItem" title="Платежи" id="HC2-aX-lhK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4To-ID-P8S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="134" y="798"/>
         </scene>
-        <!--View Controller-->
+        <!--История-->
         <scene sceneID="Cix-8q-SJY">
             <objects>
                 <viewController id="8xH-4P-244" sceneMemberID="viewController">
@@ -36,18 +36,18 @@
                         <viewControllerLayoutGuide type="top" id="De1-fE-xHq"/>
                         <viewControllerLayoutGuide type="bottom" id="Ov9-Oq-TGF"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="wbt-aJ-uoV">
+                    <view key="view" contentMode="scaleToFill" id="wbt-aJ-uoV" customClass="GlobalView" customModule="RaiffeisenHack" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="VBP-Tx-Pja"/>
+                    <navigationItem key="navigationItem" title="История" id="VBP-Tx-Pja"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2dq-YM-yl6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="913" y="798"/>
         </scene>
-        <!--View Controller-->
+        <!--Чат-->
         <scene sceneID="5DZ-dF-Xm6">
             <objects>
                 <viewController id="dnb-J8-0LI" sceneMemberID="viewController">
@@ -55,18 +55,18 @@
                         <viewControllerLayoutGuide type="top" id="66E-mS-uPu"/>
                         <viewControllerLayoutGuide type="bottom" id="eOj-3q-PKg"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="VNo-SA-s04">
+                    <view key="view" contentMode="scaleToFill" id="VNo-SA-s04" customClass="GlobalView" customModule="RaiffeisenHack" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="SJR-j6-rCP"/>
+                    <navigationItem key="navigationItem" title="Чат" id="SJR-j6-rCP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7VO-Dw-9jC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1705" y="797"/>
         </scene>
-        <!--View Controller-->
+        <!--Еще-->
         <scene sceneID="S4S-gU-s7d">
             <objects>
                 <viewController id="ArT-qA-lUe" sceneMemberID="viewController">
@@ -74,18 +74,18 @@
                         <viewControllerLayoutGuide type="top" id="Pgg-Oz-5l2"/>
                         <viewControllerLayoutGuide type="bottom" id="vzP-Tj-Fzo"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="axr-xY-NVx">
+                    <view key="view" contentMode="scaleToFill" id="axr-xY-NVx" customClass="GlobalView" customModule="RaiffeisenHack" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="oDU-O1-oet"/>
+                    <navigationItem key="navigationItem" title="Еще" id="oDU-O1-oet"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bHd-oj-fsa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2513" y="797"/>
         </scene>
-        <!--View Controller-->
+        <!--Счета-->
         <scene sceneID="Dw2-Ne-dCs">
             <objects>
                 <viewController id="Efk-2W-uTa" sceneMemberID="viewController">
@@ -93,21 +93,21 @@
                         <viewControllerLayoutGuide type="top" id="7O4-I9-lkO"/>
                         <viewControllerLayoutGuide type="bottom" id="Vkm-hq-Pz0"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="LTi-6i-wdz">
+                    <view key="view" contentMode="scaleToFill" id="LTi-6i-wdz" customClass="GlobalView" customModule="RaiffeisenHack" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="jx3-9u-b04"/>
+                    <navigationItem key="navigationItem" title="Счета" id="jx3-9u-b04"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VqH-Yb-a2Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-647" y="799"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Global Tab Bar Controller-->
         <scene sceneID="QpB-kJ-ATi">
             <objects>
-                <tabBarController id="slk-Be-Vaa" sceneMemberID="viewController">
+                <tabBarController id="slk-Be-Vaa" customClass="GlobalTabBarController" customModule="RaiffeisenHack" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="UmY-sB-cmT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -131,7 +131,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AGG-CO-Jd8" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Счета" image="billings" selectedImage="billings-fill" id="fH9-zT-oXB"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ze0-Vf-6xg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ze0-Vf-6xg" customClass="GlobalNavigationBar" customModule="RaiffeisenHack" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -150,7 +150,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JAd-rm-Urz" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Платежи" image="payments" selectedImage="payments-fill" id="3ZB-12-g4h"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yS3-HY-Lrq">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yS3-HY-Lrq" customClass="GlobalNavigationBar" customModule="RaiffeisenHack" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -169,7 +169,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gWD-X5-oim" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="История" image="history" selectedImage="history-fill" id="2dL-HY-zer"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XOj-Jw-CRl">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XOj-Jw-CRl" customClass="GlobalNavigationBar" customModule="RaiffeisenHack" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -188,7 +188,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Xkw-qp-3fT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Чат" image="chat" selectedImage="chat-fill" id="nYz-uY-cXU"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FtJ-Mz-boG">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FtJ-Mz-boG" customClass="GlobalNavigationBar" customModule="RaiffeisenHack" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -207,7 +207,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Vu-Lb-dos" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Еще" image="more" selectedImage="more-fill" id="UrU-ed-PdW"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zPr-PX-oiW">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zPr-PX-oiW" customClass="GlobalNavigationBar" customModule="RaiffeisenHack" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
