@@ -61,7 +61,7 @@ var billingsDataJSON: JSON = [
         "entities": [
             [
                 "name" : "Образовательный кредит",
-                "info": "До 16 Апр. 2017",
+                "info": "4 Апр. к оплате",
                 "rate": 15,
                 "toPay": 302,
                 "balance": 120000,
