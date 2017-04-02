@@ -364,9 +364,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4wJ-MS-P7n">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4wJ-MS-P7n">
                                                     <rect key="frame" x="318" y="6" width="51" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Touch ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7sv-ft-zvW">
                                                     <rect key="frame" x="16" y="11" width="68" height="21"/>
@@ -377,7 +376,9 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="7sv-ft-zvW" firstAttribute="centerY" secondItem="Ajs-kg-dbm" secondAttribute="centerY" id="Jnm-aO-Pbl"/>
+                                                <constraint firstItem="4wJ-MS-P7n" firstAttribute="top" secondItem="Ajs-kg-dbm" secondAttribute="top" constant="6" id="Qmn-wj-Xh5"/>
                                                 <constraint firstItem="7sv-ft-zvW" firstAttribute="leading" secondItem="Ajs-kg-dbm" secondAttribute="leading" constant="16" id="bUG-eg-5WL"/>
+                                                <constraint firstAttribute="trailing" secondItem="4wJ-MS-P7n" secondAttribute="trailing" constant="8" id="hfe-te-56y"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -388,9 +389,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="000-77-Eu6">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="000-77-Eu6">
                                                     <rect key="frame" x="318" y="6" width="51" height="31"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3-х минутный вход без кода " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yPZ-55-Y7q">
                                                     <rect key="frame" x="16" y="11" width="231" height="21"/>
@@ -401,6 +401,8 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="yPZ-55-Y7q" firstAttribute="leading" secondItem="grr-px-Nho" secondAttribute="leading" constant="16" id="Jwc-BD-tyY"/>
+                                                <constraint firstAttribute="trailing" secondItem="000-77-Eu6" secondAttribute="trailing" constant="8" id="btz-Ij-b9l"/>
+                                                <constraint firstItem="000-77-Eu6" firstAttribute="top" secondItem="grr-px-Nho" secondAttribute="top" constant="6" id="rd5-sj-41w"/>
                                                 <constraint firstItem="yPZ-55-Y7q" firstAttribute="centerY" secondItem="grr-px-Nho" secondAttribute="centerY" id="x3W-bK-phf"/>
                                             </constraints>
                                         </tableViewCellContentView>
@@ -540,6 +542,16 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="5cv-tc-DyQ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Wms-T4-p1d">
+                                        <rect key="frame" x="0.0" y="55.5" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wms-T4-p1d" id="PnN-ne-DxK">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

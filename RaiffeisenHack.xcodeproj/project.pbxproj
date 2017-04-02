@@ -114,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				11EF18931E8FF60900780559 /* HistoryDataJson.swift */,
+				115257EE1E903D6D000323A4 /* GlobalCell.swift */,
 				11EF18971E9006F000780559 /* HistoryViewController.swift */,
 			);
 			name = HistoryViewController;
@@ -144,7 +145,6 @@
 				ED0EC6E81E8F90D600676018 /* Acutus.swift */,
 				ED0EC6EA1E8F96C300676018 /* ChatViewController.swift */,
 				ED0EC7091E8FC6A600676018 /* MessageLoader.swift */,
-				115257EE1E903D6D000323A4 /* GlobalCell.swift */,
 				115257EF1E903D6D000323A4 /* GlobalCell.xib */,
 				11EF18921E8FF57C00780559 /* HistoryViewController */,
 				ED0EC6FC1E8FA74D00676018 /* ReceiverMessage.swift */,
