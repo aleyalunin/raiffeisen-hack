@@ -58,6 +58,12 @@ class Acutus:NSObject, URLSessionDataDelegate{
         }
     }
     
+    func parseString(_ string:String){
+        let pattern = "<break>([\\s\\S]*)"
+        let matched = matches(for: pattern, in: string)
+        print(matched)
+    }
+    
     
     
 }

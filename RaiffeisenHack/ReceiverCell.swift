@@ -41,7 +41,7 @@ class ReceiverCell: MessageCell, MessageCellProtocol {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        cloudView.layer.cornerRadius = 15.0
+        cloudView.layer.cornerRadius = 17.5
         cloudView.layer.masksToBounds = true
         
     }

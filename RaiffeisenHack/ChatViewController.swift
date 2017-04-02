@@ -30,14 +30,16 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         bot.delegate = self
         
-        tableView.estimatedRowHeight = 50
+        tableView.estimatedRowHeight = 36.0
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.contentInset.bottom = 50.0
         
-        NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(ChatViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        textField.delegate = self
         
-        self.hideKeyboardWhenTappedAround(view: tableView)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: .UIKeyboardWillHide, object: nil)
+        
+        //self.hideKeyboardWhenTappedAround(tblView: )
     }
     
     func register(cellsFromNIB:[ChatCell]){
@@ -48,32 +50,42 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
         
     }
-    
+
     //MARK: - Text Field
+    
+    func hideKeyboardWhenTappedAround(tblView: UITableView) {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        tblView.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        self.textField.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.textField.resignFirstResponder()
+        return true
+    }
+
     
     func keyboardWillShow(notification: NSNotification) {
         
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if view.frame.origin.y == 0{
-                view.frame.origin.y -= keyboardSize.height - barHeight
+                //view.frame.origin.y -= keyboardSize.height - barHeight
             }
         }
-        
     }
     
     func keyboardWillHide(notification: NSNotification) {
+        
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if view.frame.origin.y != 0{
-                view.frame.origin.y += keyboardSize.height - barHeight
+               //view.frame.origin.y += keyboardSize.height + barHeight
             }
         }
-    }    
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
     }
-    
     
     //MARK: - Table Update
     
@@ -86,6 +98,27 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.beginUpdates()
         tableView.insertRows(at: [IndexPath(row: messages.count-1, section: 0)], with: .automatic)
         tableView.endUpdates()
+        
+        if messages[messages.count-1] is SenderMessage{
+            
+            var i = messages.count-2
+            var paths = [IndexPath]()
+            
+            while i > 0{
+                
+                if messages[i] is SenderMessage{
+                    let indexPath = IndexPath(row: i, section: 0)
+                    paths.append(indexPath)
+                }
+                
+                i -= 1
+            }
+            
+            tableView.reloadRows(at: paths, with: .none)
+        }
+        
+        
+        updateContentInsetForTableView(tableView: self.tableView, animated: true)
         scrollToBottom()
     }
     
@@ -137,6 +170,10 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     //MARK: - Cells
     
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
     func drawReceiverCell(_ tableView: UITableView, _ indexPath: IndexPath, _ message: ReceiverMessage) -> UITableViewCell{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ChatCell.receiver.rawValue, for: indexPath) as! ReceiverCell
@@ -150,33 +187,73 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func drawSenderCell(_ tableView: UITableView, _ indexPath: IndexPath, _ message:SenderMessage) -> UITableViewCell{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: ChatCell.sender.rawValue, for: indexPath) as! SenderCell
- 
+        
         cell.message = message.text
         cell.date = message.date
         
-        var requireImageAndName = false
+        var isLast = false
         
         if indexPath.row == messages.count-1{
-            requireImageAndName = true
+            isLast = true
         }
         else if messages[indexPath.row+1] is ReceiverMessage
         {
-            requireImageAndName = true
+            isLast = true
         }
+        
  
         
-        if requireImageAndName{
+        if isLast{
             cell.customView.image = message.supporter.image
             cell.nameLabel.text = message.supporter.name
         }
         else{
-            cell.nameLabel.text = ""
+            cell.customView.image = nil
+            cell.nameLabel.text = String()
         }
         
         return cell
     }
     
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        updateContentInsetForTableView(tableView: self.tableView, animated:false)
+    }
     
+    
+    func updateContentInsetForTableView(tableView: UITableView, animated:Bool){
+        let lastRow = tableView.numberOfRows(inSection: 0)
+        let lastIndex = lastRow > 0 ? lastRow - 1 : 0
+        let lastIndexPath = IndexPath(row: lastIndex, section: 0)
+        let lastCellFrame = tableView.rectForRow(at: lastIndexPath)
+        let topInset = max(tableView.frame.height - lastCellFrame.origin.y - lastCellFrame.height, 0) - 25.0
+        var contentInset = tableView.contentInset
+        contentInset.top = topInset
+        
+        let options = UIViewAnimationOptions.beginFromCurrentState
+        
+        UIView.animate(withDuration: animated ? 0.25 : 0.0, delay: 0.0, options: options, animations: {
+            
+            tableView.contentInset = contentInset
+            
+        }, completion: nil)
+        
+    }
+    
+    //MARK: - URL
+    
+    func openURL(url:String!){
+        
+        if let targetURL = URL(string: url) {
+            if #available(iOS 10, *) {
+                UIApplication.shared.open(targetURL, options: [:],
+                                          completionHandler: nil)
+            } else {
+                _ = UIApplication.shared.openURL(targetURL)
+            }
+        }
+    }
 
+    
 }

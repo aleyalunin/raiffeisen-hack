@@ -100,6 +100,18 @@ extension String{
     
 }
 
+func matches(for regex: String, in text: String) -> [String] {
+    
+    do {
+        let regex = try NSRegularExpression(pattern: regex)
+        let nsString = text as NSString
+        let results = regex.matches(in: text, range: NSRange(location: 0, length: nsString.length))
+        return results.map { nsString.substring(with: $0.range)}
+    } catch let error {
+        print("invalid regex: \(error.localizedDescription)")
+        return []
+    }
+}
 
 public enum ChatCell:String{
     case receiver = "ReceiverCell"
@@ -143,16 +155,4 @@ class DataLoader{
     
 }
 
-// Put this piece of code anywhere you like
-extension UIViewController {
-    func hideKeyboardWhenTappedAround(view: UITableView) {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-    
-    func dismissKeyboard() {
-        view.endEditing(true)
-    }
-}
 
