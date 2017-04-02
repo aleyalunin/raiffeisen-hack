@@ -12,46 +12,47 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReceiverCell" rowHeight="100" id="KGk-i7-Jjw" customClass="ReceiverCell" customModule="RaiffeisenHack" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReceiverCell" rowHeight="106" id="KGk-i7-Jjw" customClass="ReceiverCell" customModule="RaiffeisenHack" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="29"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="35"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HLa-WW-HHe">
-                        <rect key="frame" x="340" y="6" width="20" height="18"/>
+                        <rect key="frame" x="340" y="0.0" width="20" height="34"/>
                         <color key="backgroundColor" red="1" green="0.84313725490196079" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="A3N-y2-mEv"/>
                         </constraints>
                     </view>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9W-W9-JcE">
-                        <rect key="frame" x="345" y="6" width="10" height="18"/>
+                        <rect key="frame" x="345" y="0.0" width="10" height="34"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="lessThanOrEqual" constant="240" id="Utt-b4-bkZ"/>
                             <constraint firstAttribute="height" relation="lessThanOrEqual" constant="250" id="krY-bF-n9C"/>
                         </constraints>
-                        <inset key="scrollIndicatorInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <inset key="scrollIndicatorInsets" minX="14" minY="8" maxX="14" maxY="8"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
                     </textView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="16:12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4J-rD-Ov1">
-                        <rect key="frame" x="295" y="4" width="42" height="21"/>
+                        <rect key="frame" x="295" y="6" width="42" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.52156862745098043" green="0.55686274509803924" blue="0.59999999999999998" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="HLa-WW-HHe" secondAttribute="trailing" constant="15" id="Gn1-zm-AuI"/>
-                    <constraint firstItem="s9W-W9-JcE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="P4j-af-hoT"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="HLa-WW-HHe" secondAttribute="trailing" constant="6" id="Gn1-zm-AuI"/>
+                    <constraint firstItem="s9W-W9-JcE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="P4j-af-hoT"/>
                     <constraint firstItem="HLa-WW-HHe" firstAttribute="width" secondItem="s9W-W9-JcE" secondAttribute="width" constant="10" id="SMi-ll-xlV"/>
                     <constraint firstItem="s9W-W9-JcE" firstAttribute="height" secondItem="HLa-WW-HHe" secondAttribute="height" id="Xxi-62-meQ"/>
                     <constraint firstItem="s9W-W9-JcE" firstAttribute="centerX" secondItem="HLa-WW-HHe" secondAttribute="centerX" id="db2-bl-yiz"/>
-                    <constraint firstItem="HLa-WW-HHe" firstAttribute="leading" secondItem="I4J-rD-Ov1" secondAttribute="trailing" constant="5" id="lDs-1j-3aQ"/>
+                    <constraint firstItem="HLa-WW-HHe" firstAttribute="leading" secondItem="I4J-rD-Ov1" secondAttribute="trailing" constant="6" id="lDs-1j-3aQ"/>
                     <constraint firstItem="s9W-W9-JcE" firstAttribute="centerY" secondItem="HLa-WW-HHe" secondAttribute="centerY" id="raT-4x-EPs"/>
-                    <constraint firstAttribute="bottom" secondItem="HLa-WW-HHe" secondAttribute="bottom" constant="6" id="tdZ-4I-o0s"/>
+                    <constraint firstAttribute="bottom" secondItem="HLa-WW-HHe" secondAttribute="bottom" constant="2" id="tdZ-4I-o0s"/>
                     <constraint firstItem="I4J-rD-Ov1" firstAttribute="centerY" secondItem="HLa-WW-HHe" secondAttribute="centerY" id="uR9-b5-30h"/>
                 </constraints>
             </tableViewCellContentView>
@@ -60,7 +61,7 @@
                 <outlet property="dateLabel" destination="I4J-rD-Ov1" id="0Y3-NR-vhY"/>
                 <outlet property="textView" destination="s9W-W9-JcE" id="XKq-Iq-LXO"/>
             </connections>
-            <point key="canvasLocation" x="74" y="82"/>
+            <point key="canvasLocation" x="73.5" y="85"/>
         </tableViewCell>
     </objects>
 </document>

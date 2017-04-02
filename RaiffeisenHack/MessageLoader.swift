@@ -15,10 +15,9 @@ class MessageLoader:NSObject{
     func loadMessages() -> [Message]{
         
         var messages = [Message]()
-        
-        messages.append(ReceiverMessage(text: "Добрый день, будьте добры, расскажите о комиссии при переводе на карту Райффайзена?", date: Date()))
-        messages.append(SenderMessage(text: "хз", date: Date(), supporter: supporter))
-        messages.append(SenderMessage(text: "попробуйте перевести", date: Date(), supporter: supporter))
+        messages.append(ReceiverMessage(text: "1238273487238478", date: Date()))
+        messages.append(SenderMessage(text: "Чем я могу вам помочь?", date: Date(), supporter: supporter))
+        messages.append(SenderMessage(text: "Чем я могу вам помочь?", date: Date(), supporter: supporter))
         
         return messages
     }

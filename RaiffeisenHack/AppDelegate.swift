@@ -11,7 +11,7 @@ import UIKit
 let orangeColor = UIColor(red: 255/255.0, green: 215/255.0, blue: 0/255.0, alpha: 1.0)
 let greenColor = UIColor(red: 37/255.0, green: 147/255.0, blue: 42/255.0, alpha: 1.0)
 let mainBackgroundColor = UIColor(red: 229/255.0, green: 229/255.0, blue: 229/255.0, alpha: 1.0)
-let supporter = Supporter(name: "Роман", image: #imageLiteral(resourceName: "supporter"))
+let supporter = Supporter(name: "Роман", image: #imageLiteral(resourceName: "person"))
 let botSupporter = Supporter(image: #imageLiteral(resourceName: "supporter"))
 
 @UIApplicationMain
