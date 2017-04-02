@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+	<category>
+		<pattern>*</pattern>
+		<template>
+			<random>
+				<li>Ух, не могли бы Вы объяснить это другими словами?</li>
+				<li>Прошу прощения, я Вас не совсем понимаю</li>
+				<li>Затрудняюсь ответить на это</li>
+			</random>
+		</template>
+	</category>
+
+	<category>
+		<pattern>ДОБРЫЙ</pattern>
+		<template>
+			<random>
+				<li>Здравствуйте!</li>
+				<li>О, рады вас видеть! Возник вопрос?</li>
+			</random>
+		</template>
+	</category>
+
+	<category>
+		<pattern>ДОБРЫЙ *</pattern>
+		<template>
+			<random>
+				<li>Здравствуйте!</li>
+				<li>О, рады вас видеть! Возник вопрос?</li>
+			</random>
+		</template>
+	</category>
+
+	<category>
+		<pattern>ПРИВЕТ</pattern>
+		<template>
+			<srai>ДОБРЫЙ</srai>
+		</template>
+	</category>	
+
+	<category>
+		<pattern>ПРИВЕТ *</pattern>
+		<template>
+			<srai>ДОБРЫЙ</srai>
+		</template>
+	</category>	
+
+	<category>
+		<pattern>* ПРИВЕТ</pattern>
+		<template>
+			<srai>ДОБРЫЙ</srai>
+		</template>
+	</category>	
+
+	<category>
+		<pattern>ЗДРАВСТВУЙТЕ</pattern>
+		<template>
+			<srai>ДОБРЫЙ</srai>
+		</template>
+	</category>	
+
+	<category>
+		<pattern>ЗДРАВСТВУЙТЕ *</pattern>
+		<template>
+			<srai>ДОБРЫЙ</srai>
+		</template>
+	</category>	
+
+</aiml>

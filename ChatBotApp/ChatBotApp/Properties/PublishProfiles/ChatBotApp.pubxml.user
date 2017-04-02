@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAdBG5ECFusU2RZVkLejFCXQAAAAACAAAAAAAQZgAAAAEAACAAAAC1+njzVeYoEw1jQCrO9e/DkWtmosV+0sNxpDlLpbdU0QAAAAAOgAAAAAIAACAAAACVrY6ovoZ3Xyyj419gCVZFYjmNmCi395xQ0p0yzjOflCAAAADuO1COxFKPEGGTkdQ1PM8RVzlTpZSynjrUPw+pxrvNN0AAAAAIOI4qO8ub+LACVv4+pmEusRlXdZgqxhb/FVK/UyFVNHz3cCyk0DnmcxHiICmmJsTEvN3tzN9Xu8nBVaecqZgF</EncryptedPassword>
+    <_PublishTargetUrl>ftp://FTP-EU.SMARTERASP.NET/chatbot</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="aiml/Bank.aiml">
+      <publishTime>04/02/2017 14:42:18</publishTime>
+    </File>
+    <File Include="aiml/Welcome.aiml">
+      <publishTime>04/02/2017 14:30:30</publishTime>
+    </File>
+    <File Include="bin/aiml/Bank.aiml">
+      <publishTime>04/02/2017 14:42:18</publishTime>
+    </File>
+    <File Include="bin/aiml/Welcome.aiml">
+      <publishTime>04/02/2017 14:30:30</publishTime>
+    </File>
+    <File Include="bin/AIMLbot.dll">
+      <publishTime>01/04/2017 10:04:10</publishTime>
+    </File>
+    <File Include="bin/ChatBotApp.dll">
+      <publishTime>01/04/2017 17:01:48</publishTime>
+    </File>
+    <File Include="bin/ChatBotApp.pdb">
+      <publishTime>03/31/2017 18:02:05</publishTime>
+    </File>
+    <File Include="bin/config/DefaultPredicates.xml">
+      <publishTime>03/31/2017 16:34:18</publishTime>
+    </File>
+    <File Include="bin/config/GenderSubstitutions.xml">
+      <publishTime>03/31/2017 16:34:18</publishTime>
+    </File>
+    <File Include="bin/config/Person2Substitutions.xml">
+      <publishTime>03/31/2017 16:34:18</publishTime>
+    </File>
+    <File Include="bin/config/PersonSubstitutions.xml">
+      <publishTime>03/31/2017 16:34:18</publishTime>
+    </File>
+    <File Include="bin/config/Settings.xml">
+      <publishTime>03/31/2017 16:34:18</publishTime>
+    </File>
+    <File Include="bin/config/Splitters.xml">
+      <publishTime>03/31/2017 16:34:18</publishTime>
+    </File>
+    <File Include="bin/config/Substitutions.xml">
+      <publishTime>03/31/2017 16:34:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>06/15/2015 02:06:24</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>06/18/2015 20:19:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>06/18/2015 20:19:46</publishTime>
+    </File>
+    <File Include="config/DefaultPredicates.xml">
+      <publishTime>03/31/2017 16:34:18</publishTime>
+    </File>
+    <File Include="config/GenderSubstitutions.xml">
+      <publishTime>03/31/2017 16:34:18</publishTime>
+    </File>
+    <File Include="config/LatestPayments.xml">
+      <publishTime>03/31/2017 16:34:18</publishTime>
+    </File>
+    <File Include="config/Person2Substitutions.xml">
+      <publishTime>03/31/2017 16:34:18</publishTime>
+    </File>
+    <File Include="config/PersonSubstitutions.xml">
+      <publishTime>03/31/2017 16:34:18</publishTime>
+    </File>
+    <File Include="config/Settings.xml">
+      <publishTime>03/31/2017 16:34:18</publishTime>
+    </File>
+    <File Include="config/Splitters.xml">
+      <publishTime>03/31/2017 16:34:18</publishTime>
+    </File>
+    <File Include="config/Substitutions.xml">
+      <publishTime>03/31/2017 16:34:18</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>01/04/2017 17:00:43</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>03/31/2017 14:18:41</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>01/04/2017 10:10:37</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

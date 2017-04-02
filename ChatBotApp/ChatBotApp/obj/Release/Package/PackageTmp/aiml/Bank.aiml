@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+	<category>
+		<pattern>НОМЕР КАРТЫ</pattern>
+		<template>
+			Пожалуйста, номер вашей карты - <bot name="cardnumber"/>
+		</template>
+	</category>	
+
+	<category>
+		<pattern>НОМЕР КАРТЫ *</pattern>
+		<template><srai>НОМЕР КАРТЫ</srai></template>
+	</category>
+
+	<category>
+		<pattern>* НОМЕР КАРТЫ</pattern>
+		<template><srai>НОМЕР КАРТЫ</srai></template>
+	</category>
+
+	<category>
+		<pattern>* НОМЕР КАРТЫ *</pattern>
+		<template><srai>НОМЕР КАРТЫ</srai></template>
+	</category>
+
+	<category>
+		<pattern>БАЛАНС</pattern>
+		<template>
+			На вашем счету <bot name="balance"/>р.
+		</template>
+	</category>
+
+	<category>
+		<pattern>* БАЛАНС</pattern>
+		<template><srai>БАЛАНС</srai></template>
+	</category>
+
+	<category>
+		<pattern>БАЛАНС *</pattern>
+		<template><srai>БАЛАНС</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* БАЛАНС *</pattern>
+		<template><srai>БАЛАНС</srai></template>
+	</category>	
+
+	<category>
+		<pattern>ОТДЕЛЕНИЕ</pattern>
+		<template>Ближайшее для Вас отделение: г. Москва, ул. Большая Полянка, дом 3/9, стр. 1</template>
+	</category>	
+
+	<category>
+		<pattern>ОТДЕЛЕНИЕ *</pattern>
+		<template><srai>ОТДЕЛЕНИЕ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* ОТДЕЛЕНИЕ</pattern>
+		<template><srai>ОТДЕЛЕНИЕ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* ОТДЕЛЕНИЕ *</pattern>
+		<template><srai>ОТДЕЛЕНИЕ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>ОТДЕЛЕНИЯ *</pattern>
+		<template><srai>ОТДЕЛЕНИЕ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* ОТДЕЛЕНИЯ</pattern>
+		<template><srai>ОТДЕЛЕНИЕ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* ОТДЕЛЕНИЯ *</pattern>
+		<template><srai>ОТДЕЛЕНИЕ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>ОТДЕЛЕНИЮ *</pattern>
+		<template><srai>ОТДЕЛЕНИЕ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* ОТДЕЛЕНИЮ</pattern>
+		<template><srai>ОТДЕЛЕНИЕ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* ОТДЕЛЕНИЮ *</pattern>
+		<template><srai>ОТДЕЛЕНИЕ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>БАНКОМАТ</pattern>
+		<template>Ближайший для Вас банкомат: г. Москва, ул. Большая Полянка, дом 3/9, стр. 1</template>
+	</category>	
+
+	<category>
+		<pattern>БАНКОМАТ *</pattern>
+		<template><srai>БАНКОМАТ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* БАНКОМАТ</pattern>
+		<template><srai>БАНКОМАТ</srai></template>
+	</category>		
+
+	<category>
+		<pattern>* БАНКОМАТ *</pattern>
+		<template><srai>БАНКОМАТ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>КУРС ВАЛЮТ</pattern>
+		<template>Пожалуйста, курс валют на 02.04.2017. Доллар: покупка 54.98, продажа 57.51. Евро: покупка 58.71, продажа 61.44.</template>
+	</category>	
+
+	<category>
+		<pattern>КУРС ВАЛЮТ *</pattern>
+		<template><srai>КУРС ВАЛЮТ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* КУРС ВАЛЮТ</pattern>
+		<template><srai>КУРС ВАЛЮТ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* КУРС ВАЛЮТ *</pattern>
+		<template><srai>КУРС ВАЛЮТ</srai></template>
+	</category>			
+
+	<category>
+		<pattern>АКЦИИ</pattern>
+		<template>Сейчас действуют специальные предложения, о которых можно почитать здесь: https://www.raiffeisen.ru/special_offers/</template>
+	</category>	
+
+	<category>
+		<pattern>АКЦИИ *</pattern>
+		<template><srai>АКЦИИ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* АКЦИИ</pattern>
+		<template><srai>АКЦИИ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* АКЦИИ *</pattern>
+		<template><srai>АКЦИИ</srai></template>
+	</category>	
+
+
+	<category>
+		<pattern>СКИДКИ</pattern>
+		<template><srai>АКЦИИ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>СКИДКИ *</pattern>
+		<template><srai>АКЦИИ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* СКИДКИ</pattern>
+		<template><srai>АКЦИИ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* СКИДКИ *</pattern>
+		<template><srai>АКЦИИ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ</pattern>
+		<template><srai>АКЦИИ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ *</pattern>
+		<template><srai>АКЦИИ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ</pattern>
+		<template><srai>АКЦИИ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ *</pattern>
+		<template><srai>АКЦИИ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЕ</pattern>
+		<template><srai>АКЦИИ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ *</pattern>
+		<template><srai>АКЦИИ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ</pattern>
+		<template><srai>АКЦИИ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* СПЕЦИАЛЬНЫЕ ПРЕДЛОЖЕНИЯ *</pattern>
+		<template><srai>АКЦИИ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>КРЕДИТЫ</pattern>
+		<template>О потребительских кредитах можно почитать здесь: https://www.raiffeisen.ru/retail/consumerloans/</template>
+	</category>	
+
+	<category>
+		<pattern>КРЕДИТЫ *</pattern>
+		<template><srai>КРЕДИТЫ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* КРЕДИТЫ</pattern>
+		<template><srai>КРЕДИТЫ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* КРЕДИТЫ *</pattern>
+		<template><srai>КРЕДИТЫ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>КРЕДИТАХ</pattern>
+		<template><srai>КРЕДИТЫ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>КРЕДИТАХ *</pattern>
+		<template><srai>КРЕДИТЫ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* КРЕДИТАХ</pattern>
+		<template><srai>КРЕДИТЫ</srai></template>
+	</category>
+
+	<category>
+		<pattern>* КРЕДИТАХ *</pattern>
+		<template><srai>КРЕДИТЫ</srai></template>
+	</category>
+
+	<category>
+		<pattern>ВКЛАДЫ</pattern>
+		<template>О вкладах и счетах можно почитать здесь: https://www.raiffeisen.ru/retail/deposit_investing/deposit/</template>
+	</category>	
+
+	<category>
+		<pattern>ВКЛАДЫ *</pattern>
+		<template><srai>ВКЛАДЫ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* ВКЛАДЫ</pattern>
+		<template><srai>ВКЛАДЫ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* ВКЛАДЫ *</pattern>
+		<template><srai>ВКЛАДЫ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>ВКЛАДАХ</pattern>
+		<template><srai>ВКЛАДЫ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>ВКЛАДАХ *</pattern>
+		<template><srai>ВКЛАДЫ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* ВКЛАДАХ</pattern>
+		<template><srai>ВКЛАДЫ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* ВКЛАДАХ *</pattern>
+		<template><srai>ВКЛАДЫ</srai></template>
+	</category>		
+
+	
+
+	<category>
+		<pattern>СЧЕТА</pattern>
+		<template><srai>ВКЛАДЫ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>СЧЕТА *</pattern>
+		<template><srai>ВКЛАДЫ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* СЧЕТА</pattern>
+		<template><srai>ВКЛАДЫ</srai></template>
+	</category>
+
+	<category>
+		<pattern>* СЧЕТА *</pattern>
+		<template><srai>ВКЛАДЫ</srai></template>
+	</category>				
+
+	<category>
+		<pattern>СЧЕТАХ</pattern>
+		<template><srai>ВКЛАДЫ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>СЧЕТАХ *</pattern>
+		<template><srai>ВКЛАДЫ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* СЧЕТАХ</pattern>
+		<template><srai>ВКЛАДЫ</srai></template>
+	</category>		
+
+	<category>
+		<pattern>* СЧЕТАХ *</pattern>
+		<template><srai>ВКЛАДЫ</srai></template>
+	</category>		
+
+	
+
+	<category>
+		<pattern>ДЕПОЗИТЫ</pattern>
+		<template><srai>ВКЛАДЫ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>ДЕПОЗИТЫ *</pattern>
+		<template><srai>ВКЛАДЫ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* ДЕПОЗИТЫ</pattern>
+		<template><srai>ВКЛАДЫ</srai></template>
+	</category>		
+
+	<category>
+		<pattern>* ДЕПОЗИТЫ *</pattern>
+		<template><srai>ВКЛАДЫ</srai></template>
+	</category>		
+
+	<category>
+		<pattern>ДЕПОЗИТАХ</pattern>
+		<template><srai>ВКЛАДЫ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>ДЕПОЗИТАХ *</pattern>
+		<template><srai>ВКЛАДЫ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* ДЕПОЗИТАХ</pattern>
+		<template><srai>ВКЛАДЫ</srai></template>
+	</category>		
+
+	<category>
+		<pattern>* ДЕПОЗИТАХ *</pattern>
+		<template><srai>ВКЛАДЫ</srai></template>
+	</category>		
+
+	
+
+	<category>
+		<pattern>КАРТЫ</pattern>
+		<template>О картах и специальных предложениях можно почитать здесь: https://www.raiffeisen.ru/retail/cards/debit/</template>
+	</category>	
+
+	<category>
+		<pattern>КАРТЫ *</pattern>
+		<template><srai>КАРТЫ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* КАРТЫ</pattern>
+		<template><srai>КАРТЫ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* КАРТЫ *</pattern>
+		<template><srai>КАРТЫ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>КАРТАХ</pattern>
+		<template><srai>КАРТЫ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>КАРТАХ *</pattern>
+		<template><srai>КАРТЫ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* КАРТАХ</pattern>
+		<template><srai>КАРТЫ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* КАРТАХ *</pattern>
+		<template><srai>КАРТЫ</srai></template>
+	</category>	
+
+	
+
+	<category>
+		<pattern>КАРТУ</pattern>
+		<template>Могу посоветовать Вам карту #ВСЕСРАЗУ, по ней Вы получаете до 5% кэшбэка, 7% на остаток и еще много всяких плюшек :3FLAGПодробнее можно почитать здесь: https://www.raiffeisen.ru/promo/vsesrazu/#/</template>
+	</category>	
+
+	<category>
+		<pattern>КАРТУ *</pattern>
+		<template><srai>КАРТУ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* КАРТУ</pattern>
+		<template><srai>КАРТУ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* КАРТУ *</pattern>
+		<template><srai>КАРТУ</srai></template>
+	</category>	
+
+	
+
+	<category>
+		<pattern>СЧЕТ</pattern>
+		<template>Советую открыть вклад «Выгодный»: ставка до 7% в год в рублях, получение процентов ежемесячно, открытие через интернет-банк.FLAGПодробнее можно почитать здесь: https://www.raiffeisen.ru/retail/deposit_investing/deposit/product/?id28=16210</template>
+	</category>	
+
+	<category>
+		<pattern>СЧЕТ *</pattern>
+		<template><srai>СЧЕТ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* СЧЕТ</pattern>
+		<template><srai>СЧЕТ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* СЧЕТ *</pattern>
+		<template><srai>СЧЕТ</srai></template>
+	</category>	
+
+	
+	
+	<category>
+		<pattern>ВКЛАД</pattern>
+		<template><srai>СЧЕТ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>ВКЛАД *</pattern>
+		<template><srai>СЧЕТ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* ВКЛАД</pattern>
+		<template><srai>СЧЕТ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* ВКЛАД *</pattern>
+		<template><srai>СЧЕТ</srai></template>
+	</category>	
+
+	
+	
+	<category>
+		<pattern>ДЕПОЗИТ</pattern>
+		<template><srai>СЧЕТ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>ДЕПОЗИТ *</pattern>
+		<template><srai>СЧЕТ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* ДЕПОЗИТ</pattern>
+		<template><srai>СЧЕТ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* ДЕПОЗИТ *</pattern>
+		<template><srai>СЧЕТ</srai></template>
+	</category>	
+
+
+	<category>
+		<pattern>КРЕДИТ</pattern>
+		<template>Советую взять “Персональный кредит”. Процентная ставка: 14,9%-19,9% годовых в рублях, максимальная сумма кредита: 1 500 000 рублей, количество ежемесячных платежей: от 12 до 60.FLAGПодробнее можно почитать здесь: https://www.raiffeisen.ru/retail/consumerloans/product/?id28=258</template>
+	</category>	
+
+	<category>
+		<pattern>КРЕДИТ *</pattern>
+		<template><srai>КРЕДИТ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* КРЕДИТ</pattern>
+		<template><srai>КРЕДИТ</srai></template>
+	</category>	
+	<category>
+		<pattern>* КРЕДИТ *</pattern>
+		<template><srai>КРЕДИТ</srai></template>
+	</category>			
+
+
+	<category>
+		<pattern>ИПОТЕКУ</pattern>
+		<template>Можете воспользоваться ипотечной программой “Квартира на вторичном рынке”. Процентная ставка по кредиту — 11,5% годовых в рублях, cрок кредитования — от 1 года до 25 лет, первоначальный взнос по кредиту — от 15%, максимальная сумма, доступная по ипотечному кредитованию — 26 000 000 рублей.FLAGПодробнее можно почитать здесь: https://www.raiffeisen.ru/retail/consumerloans/product/?id28=258</template>
+	</category>	
+
+	<category>
+		<pattern>ИПОТЕКУ *</pattern>
+		<template><srai>ИПОТЕКУ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* ИПОТЕКУ</pattern>
+		<template><srai>ИПОТЕКУ</srai></template>
+	</category>	
+
+	<category>
+		<pattern>* ИПОТЕКУ *</pattern>
+		<template><srai>ИПОТЕКУ</srai></template>
+	</category>	
+
+
+
+</aiml>

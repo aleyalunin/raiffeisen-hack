@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+	<category>
+		<pattern>НОМЕР КАРТЫ</pattern>
+		<template>
+			Пожалуйста, номер вашей карты - <bot name="cardnumber"/>
+		</template>
+	</category>	
+
+	<category>
+		<pattern>НОМЕР КАРТЫ *</pattern>
+		<template><srai>НОМЕР КАРТЫ</srai></template>
+	</category>
+
+	<category>
+		<pattern>* НОМЕР КАРТЫ</pattern>
+		<template><srai>НОМЕР КАРТЫ</srai></template>
+	</category>
+
+	<category>
+		<pattern>БАЛАНС</pattern>
+		<template>
+			На вашем счету <bot name="balance"/>р.
+		</template>
+	</category>
+
+	<category>
+		<pattern>* БАЛАНС</pattern>
+		<template><srai>БАЛАНС</srai></template>
+	</category>
+
+	<category>
+		<pattern>БАЛАНС *</pattern>
+		<template><srai>БАЛАНС</srai></template>
+	</category>	
+
+</aiml>
