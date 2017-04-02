@@ -8,6 +8,27 @@
 
 import UIKit
 
+//Global variables
+
+struct Global{
+    static let orangeColor = UIColor(red: 255/255.0, green: 215/255.0, blue: 0/255.0, alpha: 1.0)
+    static let greenColor = UIColor(red: 37/255.0, green: 147/255.0, blue: 42/255.0, alpha: 1.0)
+    static let mainBackgroundColor = UIColor(red: 229/255.0, green: 229/255.0, blue: 229/255.0, alpha: 1.0)
+    static let supporter = Supporter(name: "Роман", image: #imageLiteral(resourceName: "person"))
+    static let botSupporter = Supporter(image: #imageLiteral(resourceName: "bot"))
+    
+    
+    struct Segues{
+        static let moreSegue = "moreSegue"
+        static let billingsSegue = "billingsSegue"
+        static let paymentsSegue = "paymentsSegue"
+        static let historySegue = "historySegue"
+    }
+    
+    
+}
+
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,6 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
         return true
     }
 
