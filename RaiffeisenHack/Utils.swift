@@ -101,7 +101,7 @@ extension String{
 }
 
 extension String {
-    func capturedGroups(withRegex pattern: String) -> [String] {
+    func capturedGroups(withRegex pattern: String) -> [String?] {
         var results = [String]()
         
         var regex: NSRegularExpression
@@ -153,8 +153,8 @@ struct Contact{
 }
 
 class GlobalPattern{
-    static let beforeSeparator = "^(.*?)\\<br>"
-    static let afterSeparator = "<br>[ \t]*([^\n\r]*)"
+    static let beforeSeparator = "^(.*?)\\FLAG"
+    static let afterSeparator = "FLAG[ \t]*([^\n\r]*)"
 }
 
 class DataLoader{

@@ -10,6 +10,7 @@
 		111F3A011E8FA08C00C4C86D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 111F3A001E8FA08C00C4C86D /* Assets.xcassets */; };
 		111F3A071E8FA73400C4C86D /* GlobalTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111F3A061E8FA73400C4C86D /* GlobalTabBarController.swift */; };
 		111F3A091E8FA7F400C4C86D /* GlobalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111F3A081E8FA7F400C4C86D /* GlobalView.swift */; };
+		11430DB31E9110C1004C730F /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11430DB21E9110C1004C730F /* MoreViewController.swift */; };
 		115257EB1E9035D4000323A4 /* BillingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115257EA1E9035D4000323A4 /* BillingsViewController.swift */; };
 		115257ED1E903609000323A4 /* billingsDataJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115257EC1E903609000323A4 /* billingsDataJSON.swift */; };
 		115257F01E903D6D000323A4 /* GlobalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115257EE1E903D6D000323A4 /* GlobalCell.swift */; };
@@ -42,6 +43,7 @@
 		111F3A001E8FA08C00C4C86D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		111F3A061E8FA73400C4C86D /* GlobalTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalTabBarController.swift; sourceTree = "<group>"; };
 		111F3A081E8FA7F400C4C86D /* GlobalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalView.swift; sourceTree = "<group>"; };
+		11430DB21E9110C1004C730F /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		115257EA1E9035D4000323A4 /* BillingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BillingsViewController.swift; sourceTree = "<group>"; };
 		115257EC1E903609000323A4 /* billingsDataJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = billingsDataJSON.swift; sourceTree = "<group>"; };
 		115257EE1E903D6D000323A4 /* GlobalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GlobalCell.swift; path = ../GlobalCell.swift; sourceTree = "<group>"; };
@@ -85,14 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		111F3A0A1E8FA8F400C4C86D /* Global objects */ = {
+		111F3A0A1E8FA8F400C4C86D /* Global Objects */ = {
 			isa = PBXGroup;
 			children = (
 				111F3A061E8FA73400C4C86D /* GlobalTabBarController.swift */,
 				111F3A081E8FA7F400C4C86D /* GlobalView.swift */,
 				ED0EC7071E8FC0B800676018 /* GlobalNavBar.swift */,
 			);
-			name = "Global objects";
+			name = "Global Objects";
 			sourceTree = "<group>";
 		};
 		11430DAA1E90518C004C730F /* PaymentsViewController */ = {
@@ -103,11 +105,75 @@
 			name = PaymentsViewController;
 			sourceTree = "<group>";
 		};
+		11430DAB1E910F3F004C730F /* ChatViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ED0EC7061E8FBFF300676018 /* View */,
+				11430DAF1E910FC3004C730F /* Message Entity */,
+				11430DAC1E910F4E004C730F /* ChatBot */,
+				ED0EC6EA1E8F96C300676018 /* ChatViewController.swift */,
+				ED0EC7091E8FC6A600676018 /* MessageLoader.swift */,
+			);
+			name = ChatViewController;
+			sourceTree = "<group>";
+		};
+		11430DAC1E910F4E004C730F /* ChatBot */ = {
+			isa = PBXGroup;
+			children = (
+				ED0EC6E81E8F90D600676018 /* Acutus.swift */,
+			);
+			name = ChatBot;
+			sourceTree = "<group>";
+		};
+		11430DAD1E910F91004C730F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				115257EF1E903D6D000323A4 /* GlobalCell.xib */,
+				115257EE1E903D6D000323A4 /* GlobalCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		11430DAE1E910FA4004C730F /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				11EF18931E8FF60900780559 /* HistoryDataJson.swift */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
+		11430DAF1E910FC3004C730F /* Message Entity */ = {
+			isa = PBXGroup;
+			children = (
+				ED0EC6FC1E8FA74D00676018 /* ReceiverMessage.swift */,
+				ED0EC6FE1E8FA75C00676018 /* SenderMessage.swift */,
+				ED0EC6EC1E8F974F00676018 /* Message.swift */,
+			);
+			name = "Message Entity";
+			sourceTree = "<group>";
+		};
+		11430DB01E911047004C730F /* Global Entities */ = {
+			isa = PBXGroup;
+			children = (
+				ED0EC6F81E8FA3C700676018 /* Supporter.swift */,
+				ED0EC6EE1E8F999A00676018 /* User.swift */,
+			);
+			name = "Global Entities";
+			sourceTree = "<group>";
+		};
+		11430DB11E911079004C730F /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				115257EC1E903609000323A4 /* billingsDataJSON.swift */,
+			);
+			name = JSON;
+			sourceTree = "<group>";
+		};
 		115257E91E90359F000323A4 /* BillingsViewController */ = {
 			isa = PBXGroup;
 			children = (
+				11430DB11E911079004C730F /* JSON */,
 				115257EA1E9035D4000323A4 /* BillingsViewController.swift */,
-				115257EC1E903609000323A4 /* billingsDataJSON.swift */,
 			);
 			name = BillingsViewController;
 			sourceTree = "<group>";
@@ -115,8 +181,8 @@
 		11EF18921E8FF57C00780559 /* HistoryViewController */ = {
 			isa = PBXGroup;
 			children = (
-				11EF18931E8FF60900780559 /* HistoryDataJson.swift */,
-				115257EE1E903D6D000323A4 /* GlobalCell.swift */,
+				11430DAE1E910FA4004C730F /* JSON */,
+				11430DAD1E910F91004C730F /* View */,
 				11EF18971E9006F000780559 /* HistoryViewController.swift */,
 			);
 			name = HistoryViewController;
@@ -143,21 +209,14 @@
 			isa = PBXGroup;
 			children = (
 				ED0EC7021E8FAE4D00676018 /* Main.storyboard */,
-				111F3A0A1E8FA8F400C4C86D /* Global objects */,
+				11430DB01E911047004C730F /* Global Entities */,
+				111F3A0A1E8FA8F400C4C86D /* Global Objects */,
 				ED0EC6E71E8F90A000676018 /* Supporting Files */,
-				ED0EC6E81E8F90D600676018 /* Acutus.swift */,
-				ED0EC6EA1E8F96C300676018 /* ChatViewController.swift */,
-				ED0EC7091E8FC6A600676018 /* MessageLoader.swift */,
-				115257EF1E903D6D000323A4 /* GlobalCell.xib */,
+				11430DAB1E910F3F004C730F /* ChatViewController */,
 				11EF18921E8FF57C00780559 /* HistoryViewController */,
-				ED0EC6FC1E8FA74D00676018 /* ReceiverMessage.swift */,
 				115257E91E90359F000323A4 /* BillingsViewController */,
-				ED0EC6FE1E8FA75C00676018 /* SenderMessage.swift */,
-				ED0EC7061E8FBFF300676018 /* ChatCells */,
-				ED0EC6EC1E8F974F00676018 /* Message.swift */,
-				ED0EC6F81E8FA3C700676018 /* Supporter.swift */,
-				ED0EC6EE1E8F999A00676018 /* User.swift */,
 				11430DAA1E90518C004C730F /* PaymentsViewController */,
+				11430DB21E9110C1004C730F /* MoreViewController.swift */,
 			);
 			path = RaiffeisenHack;
 			sourceTree = "<group>";
@@ -167,15 +226,15 @@
 			children = (
 				11EF18951E8FF6B400780559 /* SwiftyJSON.swift */,
 				ED0EC6D41E8F8FF800676018 /* AppDelegate.swift */,
-				ED0EC6E01E8F8FF800676018 /* Info.plist */,
-				111F3A001E8FA08C00C4C86D /* Assets.xcassets */,
-				ED0EC6DD1E8F8FF800676018 /* LaunchScreen.storyboard */,
 				ED0EC6FA1E8FA47A00676018 /* Utils.swift */,
+				ED0EC6E01E8F8FF800676018 /* Info.plist */,
+				ED0EC6DD1E8F8FF800676018 /* LaunchScreen.storyboard */,
+				111F3A001E8FA08C00C4C86D /* Assets.xcassets */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		ED0EC7061E8FBFF300676018 /* ChatCells */ = {
+		ED0EC7061E8FBFF300676018 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				ED0EC7041E8FBF8300676018 /* MessageCell.swift */,
@@ -184,7 +243,7 @@
 				ED0EC6F41E8FA33200676018 /* SenderCell.swift */,
 				ED0EC6F51E8FA33200676018 /* SenderCell.xib */,
 			);
-			name = ChatCells;
+			name = View;
 			sourceTree = "<group>";
 		};
 		F7CEA8750F809BFCEE58493E /* Pods */ = {
@@ -345,6 +404,7 @@
 				11EF18961E8FF6B400780559 /* SwiftyJSON.swift in Sources */,
 				11EF18981E9006F000780559 /* HistoryViewController.swift in Sources */,
 				ED0EC6D51E8F8FF800676018 /* AppDelegate.swift in Sources */,
+				11430DB31E9110C1004C730F /* MoreViewController.swift in Sources */,
 				ED0EC7051E8FBF8300676018 /* MessageCell.swift in Sources */,
 				115257EB1E9035D4000323A4 /* BillingsViewController.swift in Sources */,
 			);

@@ -13,7 +13,7 @@ class GlobalView: UIView {
 
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.backgroundColor = mainBackgroundColor
+        self.backgroundColor = Global.mainBackgroundColor
     }
 
 }

@@ -30,7 +30,7 @@ class GlobalCell: UITableViewCell {
         bottomLeftLabel?.text = operation["category"].string
         topRightLabel?.text = operation["amount"].intValue.stringFormat + " " + operation["currency"].string!
         if operation["amount"] > 0 {
-            topRightLabel.textColor = greenColor
+            topRightLabel.textColor = Global.greenColor
         }
         bottomRightLabel.text = nil
     }

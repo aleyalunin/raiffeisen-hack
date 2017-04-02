@@ -125,7 +125,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     //MARK: - ChatBotDelegate
     
     func messageDidLoad(message: String) {
-        let newMessage = SenderMessage(text: message, date: Date(), supporter: botSupporter)
+        let newMessage = SenderMessage(text: message, date: Date(), supporter: Global.botSupporter)
         messages.append(newMessage)
         updateTable()
     }

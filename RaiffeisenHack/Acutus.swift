@@ -49,25 +49,28 @@ class Acutus:NSObject, URLSessionDataDelegate{
         else{
             print("Data has been downloaded")
             
-            var htmlResponse = String(data: data as Data, encoding: String.Encoding.utf8)!
-            var additionalMessage = String()
+            let htmlResponse = String(data: data as Data, encoding: String.Encoding.utf8)!
+            var leftMatch = String()
+            var rightMatch = String()
             
-            if htmlResponse.capturedGroups(withRegex: GlobalPattern.beforeSeparator).count > 0 && htmlResponse.capturedGroups(withRegex: GlobalPattern.afterSeparator).count > 0{
+            if htmlResponse.capturedGroups(withRegex: GlobalPattern.beforeSeparator).count > 0{
                 
-                htmlResponse = htmlResponse.capturedGroups(withRegex: GlobalPattern.beforeSeparator)[0]
-                additionalMessage = htmlResponse.capturedGroups(withRegex: GlobalPattern.afterSeparator)[0]
+                leftMatch = htmlResponse.capturedGroups(withRegex: GlobalPattern.beforeSeparator)[0]!
+                rightMatch = htmlResponse.capturedGroups(withRegex: GlobalPattern.afterSeparator)[0]!
             }
             
-            DispatchQueue.main.async{
-                self.delegate.messageDidLoad(message: htmlResponse)
-            }
-            
-            if additionalMessage != String(){
+            if leftMatch == String(){
+                
                 DispatchQueue.main.async{
-                    self.delegate.messageDidLoad(message: additionalMessage)
+                    self.delegate.messageDidLoad(message: htmlResponse)
                 }
             }
-            
+            else{
+                DispatchQueue.main.async{
+                    self.delegate.messageDidLoad(message: leftMatch)
+                    self.delegate.messageDidLoad(message: rightMatch)
+                }
+            }  
             
         }
     }

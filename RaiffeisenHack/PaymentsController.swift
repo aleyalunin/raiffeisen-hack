@@ -70,4 +70,11 @@ class PaymentsController: UIViewController, UITableViewDelegate, UITableViewData
     func searchBarSearchButtonClicked(_ searchBar:UISearchBar){
         searchBar.endEditing(true)
     }
+    
+    //MARK: - UITableViewDelegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        self.performSegue(withIdentifier: Global.Segues.paymentsSegue, sender: self)
+    }
+    
 }

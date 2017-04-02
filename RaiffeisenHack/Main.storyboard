@@ -55,6 +55,7 @@
                     <connections>
                         <outlet property="searchBar" destination="Msf-fo-oRp" id="Xnj-CL-ooD"/>
                         <outlet property="tableView" destination="GGP-Bc-hrL" id="aGu-NA-6b6"/>
+                        <segue destination="LZH-0u-keC" kind="show" identifier="paymentsSegue" id="Iuy-QJ-FwS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4To-ID-P8S" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -89,6 +90,7 @@
                     <navigationItem key="navigationItem" title="История" id="VBP-Tx-Pja"/>
                     <connections>
                         <outlet property="historyTableView" destination="cqT-I4-T7w" id="0YJ-L3-FDC"/>
+                        <segue destination="dqj-NF-dvl" kind="show" identifier="historySegue" id="fid-oP-9Yk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2dq-YM-yl6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -170,28 +172,9 @@
             <point key="canvasLocation" x="1704.8" y="796.55172413793105"/>
         </scene>
         <!--Еще-->
-        <scene sceneID="S4S-gU-s7d">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="ArT-qA-lUe" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Pgg-Oz-5l2"/>
-                        <viewControllerLayoutGuide type="bottom" id="vzP-Tj-Fzo"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="axr-xY-NVx" customClass="GlobalView" customModule="RaiffeisenHack" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Еще" id="oDU-O1-oet"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bHd-oj-fsa" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2513" y="797"/>
-        </scene>
-        <!--Еще-->
         <scene sceneID="fhb-Ip-BfN">
             <objects>
-                <tableViewController id="Cew-DA-WI7" sceneMemberID="viewController">
+                <tableViewController id="Cew-DA-WI7" customClass="MoreViewController" customModule="RaiffeisenHack" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="10" id="BHk-d7-YJ3">
                         <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -524,10 +507,31 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Еще" id="6yh-Nj-dQY"/>
+                    <connections>
+                        <segue destination="WgN-RR-6qO" kind="show" identifier="moreSegue" id="Z0R-e0-nKv"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vhG-hs-fWW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3308" y="796.55172413793105"/>
+            <point key="canvasLocation" x="2513" y="798"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="WGZ-aJ-OMX">
+            <objects>
+                <viewController id="WgN-RR-6qO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cFX-jI-Z5r"/>
+                        <viewControllerLayoutGuide type="bottom" id="vCC-qp-gUN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kD3-hz-j5T" customClass="GlobalView" customModule="RaiffeisenHack" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fsk-Si-Kvd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2513" y="1517"/>
         </scene>
         <!--Счета-->
         <scene sceneID="Dw2-Ne-dCs">
@@ -567,6 +571,7 @@
                     <navigationItem key="navigationItem" title="Счета" id="jx3-9u-b04"/>
                     <connections>
                         <outlet property="billingsTableView" destination="5cv-tc-DyQ" id="8S1-u8-9LK"/>
+                        <segue destination="XxL-ZO-fnO" kind="show" identifier="billingsSegue" id="lGz-a9-icd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VqH-Yb-a2Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -691,6 +696,60 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VIf-cp-cU1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2513" y="43"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="S7o-5h-fcI">
+            <objects>
+                <viewController id="dqj-NF-dvl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FZt-ln-KWB"/>
+                        <viewControllerLayoutGuide type="bottom" id="bnR-gV-x7Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hvy-Dh-Buk" customClass="GlobalView" customModule="RaiffeisenHack" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BRt-PU-vmN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="913" y="1516"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Mbh-Qu-NXx">
+            <objects>
+                <viewController id="LZH-0u-keC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="J5q-Vx-aZo"/>
+                        <viewControllerLayoutGuide type="bottom" id="VjQ-KZ-WNV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="jiB-Gz-AnN" customClass="GlobalView" customModule="RaiffeisenHack" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ozs-Ob-ffj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134" y="1516"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LG3-f9-zge">
+            <objects>
+                <viewController id="XxL-ZO-fnO" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nQf-8J-HrI"/>
+                        <viewControllerLayoutGuide type="bottom" id="eJ2-aJ-FTT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4y9-tf-Zho" customClass="GlobalView" customModule="RaiffeisenHack" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gA1-K5-h5K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-647" y="1515"/>
         </scene>
     </scenes>
     <resources>

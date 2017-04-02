@@ -52,5 +52,10 @@ class BillingsViewController: UIViewController, UITableViewDelegate, UITableView
         return 85.0
     }
 
-
+    //MARK: - UITableViewDelegate
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        self.performSegue(withIdentifier: Global.Segues.billingsSegue, sender: self)
+    }
+    
 }

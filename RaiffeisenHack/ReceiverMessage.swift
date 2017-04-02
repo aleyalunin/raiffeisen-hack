@@ -8,8 +8,4 @@
 
 import Foundation
 
-class ReceiverMessage:Message{
-    
-    
-    
-}
+class ReceiverMessage:Message{}
