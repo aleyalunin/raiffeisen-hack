@@ -39,7 +39,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: .UIKeyboardWillShow, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: .UIKeyboardWillHide, object: nil)
         
-        //self.hideKeyboardWhenTappedAround(tblView: )
+        self.hideKeyboardWhenTappedAround(tblView: tableView)
     }
     
     func register(cellsFromNIB:[ChatCell]){
@@ -72,8 +72,8 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func keyboardWillShow(notification: NSNotification) {
         
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if view.frame.origin.y == 0{
-                //view.frame.origin.y -= keyboardSize.height - barHeight
+            if view.frame.origin.y != 0{
+                view.frame.origin.y -= keyboardSize.height - barHeight
             }
         }
     }
@@ -82,7 +82,7 @@ class ChatViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if view.frame.origin.y != 0{
-               //view.frame.origin.y += keyboardSize.height + barHeight
+               view.frame.origin.y += keyboardSize.height - barHeight
             }
         }
     }
