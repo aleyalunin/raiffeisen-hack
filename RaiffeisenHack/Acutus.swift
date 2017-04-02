@@ -49,20 +49,30 @@ class Acutus:NSObject, URLSessionDataDelegate{
         else{
             print("Data has been downloaded")
             
-            let htmlResponse = String(data: data as Data, encoding: String.Encoding.utf8)!
+            var htmlResponse = String(data: data as Data, encoding: String.Encoding.utf8)!
+            var additionalMessage = String()
+            
+            if htmlResponse.capturedGroups(withRegex: GlobalPattern.beforeSeparator).count > 0 && htmlResponse.capturedGroups(withRegex: GlobalPattern.afterSeparator).count > 0{
+                
+                htmlResponse = htmlResponse.capturedGroups(withRegex: GlobalPattern.beforeSeparator)[0]
+                additionalMessage = htmlResponse.capturedGroups(withRegex: GlobalPattern.afterSeparator)[0]
+            }
             
             DispatchQueue.main.async{
                 self.delegate.messageDidLoad(message: htmlResponse)
             }
             
+            if additionalMessage != String(){
+                DispatchQueue.main.async{
+                    self.delegate.messageDidLoad(message: additionalMessage)
+                }
+            }
+            
+            
         }
     }
     
-    func parseString(_ string:String){
-        let pattern = "<break>([\\s\\S]*)"
-        let matched = matches(for: pattern, in: string)
-        print(matched)
-    }
+
     
     
     
